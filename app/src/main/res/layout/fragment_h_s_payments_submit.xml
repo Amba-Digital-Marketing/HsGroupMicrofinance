@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.HSPaymentsSubmit">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/dark_blue"
+
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:id="@+id/progrebar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/textAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:text="Amount"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textCharge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:text="Charge"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textAmount"
+            app:layout_constraintTop_toBottomOf="@+id/textAmount" />
+
+        <TextView
+            android:id="@+id/textAmountUsd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:text="Amount(USD)"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textCharge"
+            app:layout_constraintTop_toBottomOf="@+id/textCharge" />
+
+        <TextView
+            android:id="@+id/textAmountKsh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:text="Amount to pay(Ksh)"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textAmountUsd"
+            app:layout_constraintTop_toBottomOf="@+id/textAmountUsd" />
+
+        <TextView
+            android:id="@+id/tvAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text=""
+            android:textColor="@color/dark_green"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="@+id/textAmount"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/tvCharge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/dark_green"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="@+id/textCharge"
+            app:layout_constraintEnd_toEndOf="@+id/tvAmount" />
+
+        <TextView
+            android:id="@+id/tvUsdAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/dark_green"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="@+id/textAmountUsd"
+            app:layout_constraintEnd_toEndOf="@+id/tvCharge" />
+
+        <TextView
+            android:id="@+id/tvAmountToPay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/dark_green"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="@+id/textAmountKsh"
+            app:layout_constraintEnd_toEndOf="@+id/tvUsdAmount" />
+
+        <LinearLayout
+            android:id="@+id/file_choser_layout"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="horizontal"
+            android:padding="2dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView40"
+            tools:layout_editor_absoluteX="0dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/choose_file"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="@dimen/smallpadding"
+                android:text="Choose file"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:id="@+id/tv_filechoosen"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="2"
+                android:hint="No file chosen" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Image (*Screenshot of payment)"
+            app:layout_constraintStart_toStartOf="@+id/amout_layout"
+            app:layout_constraintTop_toBottomOf="@+id/amout_layout" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="@color/dark_green"
+            android:text="Submit Payment"
+            app:layout_constraintTop_toBottomOf="@+id/file_choser_layout"
+            tools:layout_editor_absoluteX="132dp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/amout_layout"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+
+            android:layout_centerHorizontal="true"
+            android:hint="Enter Comment"
+            app:boxStrokeColor="@color/dark_blue"
+            app:endIconMode="clear_text"
+            app:hintTextColor="@color/dark_green"
+            app:layout_constraintTop_toBottomOf="@+id/textAmountKsh">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/comment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textMultiLine" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</RelativeLayout>

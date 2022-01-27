@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="smallpadding">5dp</dimen>
+    <dimen name="mediumpadding">10dp</dimen>
+    <dimen name="largepadding">15dp</dimen>
+    <dimen name="smallmargin">5dp</dimen>
+    <dimen name="mediummargin">10dp</dimen>
+    <dimen name="largemargin">15dp</dimen>
+    <dimen name="smallTextSize">5sp</dimen>
+    <dimen name="mediumTextSize">10sp</dimen>
+    <dimen name="largeTextSize">15sp</dimen>
+    <dimen name="verylargeTextSize">25sp</dimen>
+    <dimen name="pin_size">40dp</dimen>
+    <dimen name="text_size_18">18sp</dimen>
+</resources>

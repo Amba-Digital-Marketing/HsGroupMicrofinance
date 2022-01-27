@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.UserVerificationFragment">
+
+    <View
+        android:id="@+id/login_view"
+        android:layout_width="match_parent"
+
+        android:layout_height="60dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="16dp" />
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="200px"
+        android:layout_below="@id/login_view"
+        android:src="@drawable/logo1"
+        app:layout_constraintTop_toBottomOf="@+id/login_view"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/tvUserHint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/largemargin"
+        android:layout_marginTop="12dp"
+        android:padding="@dimen/mediumpadding"
+        android:text="Enter OTP And press Proceed"
+        android:textAlignment="center"
+        android:textColor="@color/dark_blue"
+        android:textSize="@dimen/largeTextSize"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <TextView
+        android:id="@+id/tvalert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/smallpadding"
+        android:textAlignment="center"
+        android:textColor="@color/pink"
+        app:layout_constraintBottom_toTopOf="@+id/etEmail"
+        app:layout_constraintEnd_toEndOf="@+id/etEmail"
+        app:layout_constraintStart_toStartOf="@+id/etEmail"
+        app:layout_constraintTop_toBottomOf="@+id/tvUserHint" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etEmail"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="56dp"
+        android:backgroundTint="@color/dark_blue"
+        android:drawableLeft="@drawable/ic_email_24"
+        android:textCursorDrawable="@drawable/cursor"
+        android:drawableTint="@color/dark_blue"
+        android:hint="Enter Email"
+        android:inputType="textEmailAddress"
+        android:padding="6dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/dark_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvUserHint" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etOTP"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="@color/dark_blue"
+        android:drawableLeft="@drawable/ic_lock_24"
+        android:textCursorDrawable="@drawable/cursor"
+        android:drawableTint="@color/dark_blue"
+        android:hint="Enter OTP from Email"
+        android:inputType="textPassword"
+        android:padding="6dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/dark_blue"
+        app:layout_constraintEnd_toEndOf="@+id/etEmail"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/etEmail"
+        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnProceedToPin"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="@color/pink"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text="Proceed"
+        android:textAllCaps="false"
+        android:textColor="#FFF"
+        app:layout_constraintEnd_toEndOf="@+id/etOTP"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/etOTP"
+        app:layout_constraintTop_toBottomOf="@+id/etOTP" />
+
+    <LinearLayout
+        android:id="@+id/llresendCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/largemargin"
+        android:background="@color/pink"
+        android:paddingLeft="@dimen/smallpadding"
+        android:paddingTop="2dp"
+        android:paddingRight="@dimen/smallpadding"
+        android:paddingBottom="2dp"
+        app:layout_constraintEnd_toEndOf="@+id/btnProceedToPin"
+        app:layout_constraintStart_toStartOf="@+id/btnProceedToPin"
+        app:layout_constraintTop_toBottomOf="@+id/btnProceedToPin">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnResendCode"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/white"
+            android:padding="@dimen/smallpadding"
+            android:text="Resend Code"
+            android:textAllCaps="false"
+            android:textColor="@color/pink"
+            tools:layout_editor_absoluteX="46dp"
+            tools:layout_editor_absoluteY="459dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvchangeEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/smallpadding"
+        android:layout_marginTop="@dimen/mediummargin"
+        android:textAlignment="center"
+        android:textColor="@color/dark_blue"
+        android:text="or Use another email?"
+        app:layout_constraintEnd_toEndOf="@+id/llresendCode"
+        app:layout_constraintStart_toStartOf="@+id/llresendCode"
+        app:layout_constraintTop_toBottomOf="@+id/llresendCode" />
+
+    <ProgressBar
+        android:id="@+id/progrebar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="@color/pink"
+        app:layout_constraintBottom_toTopOf="@+id/etEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        app:layout_constraintVertical_bias="0.873" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

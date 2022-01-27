@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.Fragments.BasicTransfer.ExternalBankTransfer.SingleOtherBankTransaction">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/dark_blue"
+
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="@dimen/smallpadding"
+        android:layout_margin="@dimen/largemargin"
+        android:background="@color/ghostwhite"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/largepadding">
+
+            <TextView
+                android:id="@+id/tvtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/mediumpadding"
+                android:text="Title"
+                android:textColor="@color/dark_green"
+                android:textSize="@dimen/largeTextSize"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvdetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/mediumpadding"
+                android:text="Details"
+                android:textColor="@color/dark_green"
+                android:textSize="@dimen/largeTextSize"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tvtitle"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvusername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/smallmargin"
+                android:layout_marginBottom="@dimen/smallmargin"
+                android:padding="@dimen/smallpadding"
+                android:text="Username"
+                android:textSize="@dimen/largeTextSize"
+                app:layout_constraintStart_toStartOf="@+id/tvtitle"
+                app:layout_constraintTop_toBottomOf="@+id/tvtitle" />
+
+            <TextView
+                android:id="@+id/tvusernameview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/smallmargin"
+                android:layout_marginBottom="@dimen/smallmargin"
+                android:padding="@dimen/smallpadding"
+                android:text="Username"
+                android:textColor="@color/black"
+                android:textSize="@dimen/largeTextSize"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tvusername"
+                app:layout_constraintStart_toStartOf="@+id/tvdetails"
+                app:layout_constraintTop_toBottomOf="@+id/tvtitle" />
+
+            <TextView
+                android:id="@+id/tvtransactionType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/smallmargin"
+                android:layout_marginBottom="@dimen/smallmargin"
+                android:padding="@dimen/smallpadding"
+                android:text="Transaction Type"
+                android:textSize="@dimen/largeTextSize"
+                app:layout_constraintStart_toStartOf="@+id/tvusername"
+                app:layout_constraintTop_toBottomOf="@+id/tvusername" />
+
+            <TextView
+                android:id="@+id/tvtransactionTypeView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/smallmargin"
+                android:layout_marginBottom="@dimen/smallmargin"
+                android:padding="@dimen/smallpadding"
+                android:text="Transaction Type"
+                android:textColor="@color/black"
+                android:textSize="@dimen/largeTextSize"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tvusernameview"
+                app:layout_constraintTop_toTopOf="@+id/tvtransactionType" />
+
+            <TextView
+                android:id="@+id/tvcurrency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/smallmargin"
+                android:layout_marginBottom="@dimen/smallmargin"
+                android:padding="@dimen/smallpadding"
+                android:text="currency"
+                android:textSize="@dimen/largeTextSize"
+                app:layout_constraintStart_toStartOf="@+id/tvtransactionType"
+                app:layout_constraintTop_toBottomOf="@+id/tvtransactionType" />
+
+            <TextView
+                android:id="@+id/tvcurrencyview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/smallmargin"
+                android:layout_marginBottom="@dimen/smallmargin"
+                android:padding="@dimen/smallpadding"
+                android:text="Currency"
+                android:textColor="@color/black"
+                android:textSize="@dimen/largeTextSize"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tvcurrency"
+                app:layout_constraintStart_toStartOf="@+id/tvtransactionTypeView"
+                app:layout_constraintTop_toTopOf="@+id/tvcurrency" />
+
+            <TextView
+                android:id="@+id/tvcurrencyrate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/smallmargin"
+                android:layout_marginBottom="@dimen/smallmargin"
+                android:padding="@dimen/smallpadding"
+                android:text="currency rate"
+                android:textSize="@dimen/largeTextSize"
+                app:layout_constraintStart_toStartOf="@+id/tvcurrency"
+                app:layout_constraintTop_toBottomOf="@+id/tvcurrency" />
+
+            <TextView
+                android:id="@+id/tvcurrencyrateview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/smallmargin"
+                android:layout_marginBottom="@dimen/smallmargin"
+                android:padding="@dimen/smallpadding"
+                android:text="currency rate"
+                android:textColor="@color/black"
+                android:textSize="@dimen/largeTextSize"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tvcurrencyrate"
+                app:layout_constraintStart_toStartOf="@+id/tvcurrencyview"
+                app:layout_constraintTop_toTopOf="@+id/tvcurrencyrate" />
+
+            <TextView
+                android:id="@+id/tvstatusrate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/smallmargin"
+                android:layout_marginBottom="@dimen/smallmargin"
+                android:padding="@dimen/smallpadding"
+                android:text="Status"
+                android:textSize="@dimen/largeTextSize"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvcurrencyrate" />
+
+            <TextView
+                android:id="@+id/tvstatusview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/smallmargin"
+                android:layout_marginBottom="@dimen/smallmargin"
+                android:padding="@dimen/smallpadding"
+                android:text="Status"
+                android:textColor="@color/black"
+                android:textSize="@dimen/largeTextSize"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tvstatusrate"
+                app:layout_constraintStart_toStartOf="@+id/tvcurrencyrateview"
+                app:layout_constraintTop_toTopOf="@+id/tvstatusrate"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/tvbankName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/smallmargin"
+                android:layout_marginBottom="@dimen/smallmargin"
+                android:padding="@dimen/smallpadding"
+                android:text="Bank Name"
+                android:textSize="@dimen/largeTextSize"
+                app:layout_constraintStart_toStartOf="@+id/tvstatusrate"
+                app:layout_constraintTop_toBottomOf="@+id/tvstatusrate" />
+
+            <TextView
+                android:id="@+id/tvbankNameview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/smallmargin"
+                android:layout_marginBottom="@dimen/smallmargin"
+                android:padding="@dimen/smallpadding"
+                android:text="Bank Name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/largeTextSize"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tvbankName"
+                app:layout_constraintStart_toStartOf="@+id/tvstatusview"
+                app:layout_constraintTop_toTopOf="@+id/tvbankName" />
+
+            <TextView
+                android:id="@+id/tvAccountHoldername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/smallmargin"
+                android:layout_marginBottom="@dimen/smallmargin"
+                android:padding="@dimen/smallpadding"
+                android:text="Account Holder Name"
+                android:textSize="@dimen/largeTextSize"
+                app:layout_constraintStart_toStartOf="@+id/tvbankName"
+                app:layout_constraintTop_toBottomOf="@+id/tvbankName" />
+
+            <TextView
+                android:id="@+id/tvAccountHoldernameview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/smallmargin"
+                android:layout_marginBottom="@dimen/smallmargin"
+                android:padding="@dimen/smallpadding"
+                android:text="Account Holder Name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/largeTextSize"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tvAccountHoldername"
+                app:layout_constraintStart_toStartOf="@+id/tvbankNameview"
+                app:layout_constraintTop_toTopOf="@+id/tvAccountHoldername" />
+
+            <TextView
+                android:id="@+id/tvAccountNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/smallmargin"
+                android:layout_marginBottom="@dimen/smallmargin"
+                android:padding="@dimen/smallpadding"
+                android:text="Account Number"
+                android:textSize="@dimen/largeTextSize"
+                app:layout_constraintStart_toStartOf="@+id/tvAccountHoldername"
+                app:layout_constraintTop_toBottomOf="@+id/tvAccountHoldername" />
+
+            <TextView
+                android:id="@+id/tvAccountNumberview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/smallmargin"
+                android:layout_marginBottom="@dimen/smallmargin"
+                android:padding="@dimen/smallpadding"
+                android:text="Account Number"
+                android:textColor="@color/black"
+                android:textSize="@dimen/largeTextSize"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tvAccountNumber"
+                app:layout_constraintStart_toStartOf="@+id/tvAccountHoldernameview"
+                app:layout_constraintTop_toTopOf="@+id/tvAccountNumber" />
+
+            <TextView
+                android:id="@+id/tvAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/smallmargin"
+                android:layout_marginBottom="@dimen/smallmargin"
+                android:padding="@dimen/smallpadding"
+                android:text=" Amount"
+                android:textSize="@dimen/largeTextSize"
+                app:layout_constraintStart_toStartOf="@+id/tvAccountNumber"
+                app:layout_constraintTop_toBottomOf="@+id/tvAccountNumber" />
+
+            <TextView
+                android:id="@+id/tvAmountview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/smallmargin"
+                android:layout_marginBottom="@dimen/smallmargin"
+                android:padding="@dimen/smallpadding"
+                android:text="Amount"
+                android:textColor="@color/black"
+                android:textSize="@dimen/largeTextSize"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tvAmount"
+                app:layout_constraintStart_toStartOf="@+id/tvAccountNumberview"
+                app:layout_constraintTop_toTopOf="@+id/tvAmount" />
+
+            <TextView
+                android:id="@+id/tvBranch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/smallmargin"
+                android:layout_marginBottom="@dimen/smallmargin"
+                android:padding="@dimen/smallpadding"
+                android:text=" Branch"
+                android:textSize="@dimen/largeTextSize"
+                app:layout_constraintStart_toStartOf="@+id/tvAmount"
+                app:layout_constraintTop_toBottomOf="@+id/tvAmount" />
+
+            <TextView
+                android:id="@+id/tvBranchview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/smallmargin"
+                android:layout_marginBottom="@dimen/smallmargin"
+                android:padding="@dimen/smallpadding"
+                android:text="Branch"
+                android:textColor="@color/black"
+                android:textSize="@dimen/largeTextSize"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tvBranch"
+                app:layout_constraintStart_toStartOf="@+id/tvAmountview"
+                app:layout_constraintTop_toTopOf="@+id/tvBranch" />
+
+            <TextView
+                android:id="@+id/tvTransactionDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/smallmargin"
+                android:layout_marginBottom="@dimen/smallmargin"
+                android:padding="@dimen/smallpadding"
+                android:text="Transaction Date"
+                android:textSize="@dimen/largeTextSize"
+                app:layout_constraintStart_toStartOf="@+id/tvBranch"
+                app:layout_constraintTop_toBottomOf="@+id/tvBranch" />
+
+            <TextView
+                android:id="@+id/tvTransactionDateview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/smallmargin"
+                android:layout_marginBottom="@dimen/smallmargin"
+                android:padding="@dimen/smallpadding"
+                android:text="Transaction Date"
+                android:textColor="@color/black"
+                android:textSize="@dimen/largeTextSize"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tvTransactionDate"
+                app:layout_constraintStart_toStartOf="@+id/tvBranchview"
+                app:layout_constraintTop_toTopOf="@+id/tvTransactionDate" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</FrameLayout>

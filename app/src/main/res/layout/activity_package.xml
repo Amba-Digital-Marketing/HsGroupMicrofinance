@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UI.Fragments.Package">
+
+    <!-- TODO: Update blank fragment layout -->
+    <View
+        android:id="@+id/select_package_text"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:background="@color/dark_blue"
+        android:paddingTop="20dp"
+         />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="110dp"
+        android:text="@string/select_your_package"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/white" />
+
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="170dp"
+        android:id="@+id/card"
+        android:layout_centerHorizontal="true"
+        app:cardCornerRadius="10dp"
+        android:backgroundTint="@color/fragment_background">
+        <LinearLayout
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="10dp"
+            android:orientation="horizontal"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/btn_basic"
+                >
+                <ImageView
+                    android:id="@+id/contactphone"
+                    android:layout_width="60dp"
+                    android:padding="10dp"
+                    android:src="@drawable/standard"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/round_basic_button"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    app:tint="@color/dark_blue" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Basic"
+                    android:textColor="@color/dark_blue"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/btn_gold"
+                >
+                <ImageView
+                    android:id="@+id/contactemail"
+                    android:layout_width="60dp"
+                    android:padding="10dp"
+                    android:src="@drawable/gold_ingots"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rounded_gold_button"
+                    android:layout_height="60dp"
+                    app:tint="@color/gold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gold"
+                    android:textColor="@color/gold"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_premium"
+                >
+                <ImageView
+                    android:id="@+id/contactlocation"
+                    android:layout_width="60dp"
+                    android:src="@drawable/platinum"
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rounded_premium_button"
+                    android:layout_height="60dp"
+                    app:tint="@color/cyan" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Premium"
+                    android:textColor="@color/cyan"
+                    android:layout_gravity="center"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="15dp"
+        app:cardBackgroundColor="@color/fragment_background"
+        android:padding="10dp"
+        android:layout_below="@id/card">
+        <com.smarteist.autoimageslider.SliderView
+            android:id="@+id/slider"
+            android:layout_width="320dp"
+            android:layout_height="150dp"
+            app:sliderAnimationDuration="600"
+            app:sliderAutoCycleDirection="back_and_forth"
+            app:sliderScrollTimeInSec="1" />
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+
+
+
+</RelativeLayout>

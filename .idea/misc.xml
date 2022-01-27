@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/HSApplication/app/src/main/res/drawable/bt_uisquare.xml" value="0.2203125" />
+        <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/HSApplication/app/src/main/res/layout/activity_airtime.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/HSApplication/app/src/main/res/layout/activity_base_login.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/HSApplication/app/src/main/res/layout/activity_home.xml" value="0.17916666666666667" />
+        <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/HSApplication/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/HSApplication/app/src/main/res/layout/activity_phone_book.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/HSApplication/app/src/main/res/layout/activity_sign_up.xml" value="0.17916666666666667" />
+        <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/HSApplication/app/src/main/res/layout/activity_splash_screen.xml" value="0.17916666666666667" />
+        <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/HSApplication/app/src/main/res/layout/activity_stripe.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/HSApplication/app/src/main/res/layout/fragment_base_login.xml" value="0.1" />
+        <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/HSApplication/app/src/main/res/layout/fragment_basic_dashboard.xml" value="0.17916666666666667" />
+        <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/HSApplication/app/src/main/res/layout/fragment_basic_e_deposit.xml" value="0.17916666666666667" />
+        <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/HSApplication/app/src/main/res/layout/fragment_basic_loan_packages.xml" value="0.17916666666666667" />
+        <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/HSApplication/app/src/main/res/layout/fragment_basic_settings.xml" value="0.17916666666666667" />
+        <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/HSApplication/app/src/main/res/layout/fragment_login.xml" value="0.128125" />
+        <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/HSApplication/app/src/main/res/layout/fragment_pin_setter.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/HSApplication/app/src/main/res/layout/fragment_register.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/HSApplication/app/src/main/res/layout/fragment_register_personal_info.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/HSApplication/app/src/main/res/layout/fragment_sign_up.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/HSApplication/app/src/main/res/menu/bottom_nav_menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/MR.VIRUS/Flutter/HSMicrofinance/app/src/main/res/drawable/cardback.xml" value="0.16510416666666666" />
+        <entry key="..\:/Users/MR.VIRUS/Flutter/HSMicrofinance/app/src/main/res/layout/activity_splash_screen.xml" value="0.18262411347517732" />
+        <entry key="..\:/Users/MR.VIRUS/Flutter/HSMicrofinance/app/src/main/res/layout/fragment_basic_dashboard.xml" value="0.196875" />
+        <entry key="..\:/Users/MR.VIRUS/Flutter/HSMicrofinance/app/src/main/res/layout/fragment_basic_investment_history.xml" value="0.14895833333333333" />
+        <entry key="..\:/Users/MR.VIRUS/Flutter/HSMicrofinance/app/src/main/res/layout/fragment_basic_investment_packages.xml" value="0.196875" />
+        <entry key="..\:/Users/MR.VIRUS/Flutter/HSMicrofinance/app/src/main/res/layout/fragment_basic_loan_packages.xml" value="0.196875" />
+        <entry key="..\:/Users/MR.VIRUS/Flutter/HSMicrofinance/app/src/main/res/layout/fragment_basic_pay_loans.xml" value="0.15625" />
+        <entry key="..\:/Users/MR.VIRUS/Flutter/HSMicrofinance/app/src/main/res/layout/fragment_basic_payfriends.xml" value="0.196875" />
+        <entry key="..\:/Users/MR.VIRUS/Flutter/HSMicrofinance/app/src/main/res/layout/fragment_basic_statement.xml" value="0.196875" />
+        <entry key="..\:/Users/MR.VIRUS/Flutter/HSMicrofinance/app/src/main/res/layout/fragment_bima_loan.xml" value="0.196875" />
+        <entry key="..\:/Users/MR.VIRUS/Flutter/HSMicrofinance/app/src/main/res/layout/fragment_business_loan.xml" value="0.196875" />
+        <entry key="..\:/Users/MR.VIRUS/Flutter/HSMicrofinance/app/src/main/res/layout/fragment_chama_loan.xml" value="0.196875" />
+        <entry key="..\:/Users/MR.VIRUS/Flutter/HSMicrofinance/app/src/main/res/layout/fragment_gold_deposit.xml" value="0.196875" />
+        <entry key="..\:/Users/MR.VIRUS/Flutter/HSMicrofinance/app/src/main/res/layout/fragment_kilimo_loan.xml" value="0.25" />
+        <entry key="..\:/Users/MR.VIRUS/Flutter/HSMicrofinance/app/src/main/res/layout/fragment_log_book_loan.xml" value="0.196875" />
+        <entry key="..\:/Users/MR.VIRUS/Flutter/HSMicrofinance/app/src/main/res/layout/fragment_personal_loan.xml" value="0.196875" />
+        <entry key="..\:/Users/MR.VIRUS/Flutter/HSMicrofinance/app/src/main/res/layout/fragment_platinum_deposit.xml" value="0.14895833333333333" />
+        <entry key="..\:/Users/MR.VIRUS/Flutter/HSMicrofinance/app/src/main/res/layout/fragment_single_investment_history.xml" value="0.36974358974358973" />
+        <entry key="..\:/Users/MR.VIRUS/Flutter/HSMicrofinance/app/src/main/res/layout/fragment_single_transaction.xml" value="0.14895833333333333" />
+        <entry key="..\:/Users/MR.VIRUS/Flutter/HSMicrofinance/app/src/main/res/layout/fragment_standard_deposit.xml" value="0.25" />
+        <entry key="..\:/Users/MR.VIRUS/Flutter/HSMicrofinance/app/src/main/res/layout/fragment_title_deed_loan.xml" value="0.14895833333333333" />
+        <entry key="..\:/Users/MR.VIRUS/Flutter/HSMicrofinance/app/src/main/res/layout/investment_history_item.xml" value="0.14895833333333333" />
+        <entry key="..\:/Users/MR.VIRUS/Flutter/HSMicrofinance/app/src/main/res/layout/latest_transactions.xml" value="0.14895833333333333" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

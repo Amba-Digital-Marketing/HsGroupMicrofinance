@@ -1,0 +1,850 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/basic_nav_graph"
+    app:startDestination="@id/basicDashboard">
+
+    <fragment
+        android:id="@+id/basicDashboard"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.BasicDashboard"
+        android:label="fragment_basic_dashboard"
+        tools:layout="@layout/fragment_basic_dashboard">
+        <action
+            android:id="@+id/action_basicDashboard_to_basicDepositHistory"
+            app:destination="@id/basicDepositHistory"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_basicDashboard_to_basicEDeposit"
+            app:destination="@id/basicEDeposit"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left" />
+        <action
+            android:id="@+id/action_basicDashboard_to_basicInvestmentHistory"
+            app:destination="@id/basicInvestmentHistory"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left" />
+        <action
+            android:id="@+id/action_basicDashboard_to_basicLoanHistory"
+            app:destination="@id/basicLoanHistory"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left" />
+        <action
+            android:id="@+id/action_basicDashboard_to_basicLoanPackages"
+            app:destination="@id/basicLoanPackages"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left" />
+        <action
+            android:id="@+id/action_basicDashboard_to_basicPayfriends"
+            app:destination="@id/basicPayfriends"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left" />
+        <action
+            android:id="@+id/action_basicDashboard_to_basicSettings"
+            app:destination="@id/basicSettings"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left" />
+        <action
+            android:id="@+id/action_basicDashboard_to_basicInvestmentPackages"
+            app:destination="@id/basicInvestmentPackages"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left" />
+        <action
+            android:id="@+id/action_basicDashboard_to_basicSupport"
+            app:destination="@id/basicSupport"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left" />
+        <action
+            android:id="@+id/action_basicDashboard_to_basicTransactionHistory"
+            app:destination="@id/basicTransactionHistory"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left" />
+        <action
+            android:id="@+id/action_basicDashboard_to_basicWithdrawMoney"
+            app:destination="@id/basicWithdrawMoney"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left" />
+        <action
+            android:id="@+id/action_basicDashboard_to_basicLatestTransactions2"
+            app:destination="@id/basicLatestTransactions2"
+            app:popUpTo="@id/basicDashboard"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left" />
+        <action
+            android:id="@+id/action_basicDashboard_to_basicAccount"
+            app:destination="@id/basicAccount"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left" />
+        <action
+            android:id="@+id/action_basicDashboard_to_billsTabs"
+            app:destination="@id/billsTabs"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left" />
+        <action
+            android:id="@+id/action_basicDashboard_to_myLoans"
+            app:destination="@id/myLoans"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left" />
+        <action
+            android:id="@+id/action_basicDashboard_to_transferFundsFragment"
+            app:destination="@id/transferFundsFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left" />
+        <action
+            android:id="@+id/action_basicDashboard_to_mapsActivity2"
+            app:destination="@id/mapsActivity"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left" />
+        <action
+            android:id="@+id/action_basicDashboard_to_payFriendsViaMpesa"
+            app:destination="@id/payFriendsViaMpesa"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/basicDepositHistory"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.BasicDeposit.BasicDepositHistory"
+        android:label="fragment_basic_deposit_history"
+        tools:layout="@layout/fragment_basic_deposit_history">
+        <action
+            android:id="@+id/action_basicDepositHistory_to_depositHistorySingleItem"
+            app:popUpTo="@id/basicDepositHistory"
+            app:destination="@id/depositHistorySingleItem"
+            app:enterAnim="@anim/bottom_up" />
+        <action
+            android:id="@+id/action_basicDepositHistory_to_basicDashboard"
+            app:destination="@id/basicDashboard"
+            app:popUpTo="@id/basicDashboard"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/basicEDeposit"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.BasicDeposit.EDeposit.BasicEDeposit"
+        android:label="fragment_basic_e_deposit"
+        tools:layout="@layout/fragment_basic_e_deposit">
+        <action
+            android:id="@+id/action_basicEDeposit_to_creditDebitPayment"
+            app:destination="@id/creditDebitPayment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left" />
+        <action
+            android:id="@+id/action_basicEDeposit_to_mobileMoneyPayment"
+            app:destination="@id/mobileMoneyPayment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left" />
+        <action
+            android:id="@+id/action_basicEDeposit_to_HSPay"
+            app:destination="@id/HSPay"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left" />
+        <action
+            android:id="@+id/action_basicEDeposit_to_basicDashboard"
+            app:destination="@id/basicDashboard"
+            app:popUpTo="@id/basicDashboard"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/basicInvestmentHistory"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.BasicInvestment.BasicInvestmentHistory"
+        android:label="fragment_basic_investment_history"
+        tools:layout="@layout/fragment_basic_investment_history">
+        <action
+            android:id="@+id/action_basicInvestmentHistory_to_singleInvestmentHistory"
+            app:destination="@id/singleInvestmentHistory"
+            app:popUpTo="@id/basicInvestmentHistory"
+            app:enterAnim="@anim/bottom_up" />
+        <action
+            android:id="@+id/action_basicInvestmentHistory_to_basicDashboard"
+            app:destination="@id/basicDashboard"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/basicDashboard"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/basicInvestmentPackages"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.BasicInvestment.BasicInvestmentPackages"
+        android:label="fragment_basic_investment_packages"
+        tools:layout="@layout/fragment_basic_investment_packages">
+
+
+        <action
+            android:id="@+id/action_basicInvestmentPackages_to_investmentPlansDeposit"
+            app:destination="@id/investmentPlansDeposit"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left" />
+        <action
+            android:id="@+id/action_basicInvestmentPackages_to_basicDashboard"
+            app:destination="@id/basicDashboard"
+            app:popUpTo="@id/basicDashboard"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/basicLoanHistory"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.BasicLoans.BasicLoanHistory"
+        android:label="fragment_basic_loan_history"
+        tools:layout="@layout/fragment_basic_loan_history">
+        <action
+            android:id="@+id/action_basicLoanHistory_to_loanHistorySingleItem"
+            app:popUpTo="@id/basicLoanHistory"
+            app:destination="@id/loanHistorySingleItem"
+            app:enterAnim="@anim/bottom_up" />
+        <action
+            android:id="@+id/action_basicLoanHistory_to_basicDashboard"
+            app:destination="@id/basicDashboard"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/basicDashboard"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/basicLoanPackages"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.BasicLoans.BasicLoanPackages"
+        android:label="fragment_basic_loan_packages"
+        tools:layout="@layout/fragment_basic_loan_packages">
+        <action
+            android:id="@+id/action_basicLoanPackages_to_requestLoan"
+            app:destination="@id/requestLoan"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left" />
+        <action
+            android:id="@+id/action_basicLoanPackages_to_basicDashboard"
+            app:destination="@id/basicDashboard"
+            app:popUpTo="@id/basicDashboard"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/basicPayLoans"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.BasicLoans.BasicPayLoans"
+        android:label="fragment_basic_pay_loans"
+        tools:layout="@layout/fragment_basic_pay_loans" >
+        <action
+            android:id="@+id/action_basicPayLoans_to_myLoans"
+            app:destination="@id/myLoans"
+            app:popUpTo="@id/myLoans"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/basicPayfriends"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.BasicPayForFriends.BasicPayfriends"
+        android:label="fragment_basic_payfriends"
+        tools:layout="@layout/fragment_basic_payfriends">
+        <action
+            android:id="@+id/action_basicPayfriends_to_contacts"
+            app:destination="@id/contacts" />
+        <action
+            android:id="@+id/action_basicPayfriends_to_payForFriendsOTPFragment"
+            app:destination="@id/payForFriendsOTPFragment" />
+        <action
+            android:id="@+id/action_basicPayfriends_to_basicDashboard"
+            app:destination="@id/basicDashboard"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/basicDashboard"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/basicSettings"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.AccountSettings.BasicSettings"
+        android:label="fragment_basic_settings"
+        tools:layout="@layout/fragment_basic_settings">
+        <action
+            android:id="@+id/action_basicSettings_to_accountSetting"
+            app:destination="@id/accountSetting"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left" />
+        <action
+            android:id="@+id/action_basicSettings_to_basicDashboard"
+            app:destination="@id/basicDashboard"
+            app:popUpTo="@id/basicDashboard"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/basicSupport"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.Support.BasicSupport"
+        android:label="fragment_basic_support"
+        tools:layout="@layout/fragment_basic_support">
+        <action
+            android:id="@+id/action_basicSupport_to_viewSupportItem"
+            app:destination="@id/viewSupportItem" />
+        <action
+            android:id="@+id/action_basicSupport_to_addSupportFragment"
+            app:destination="@id/addSupportFragment" />
+        <action
+            android:id="@+id/action_basicSupport_to_basicDashboard"
+            app:destination="@id/basicDashboard"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/basicDashboard"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/basicTransactionHistory"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.Transactions.BasicTransactionHistory"
+        android:label="fragment_basic_transaction_history"
+        tools:layout="@layout/fragment_basic_transaction_history" >
+        <action
+            android:id="@+id/action_basicTransactionHistory_to_basicDashboard"
+            app:destination="@id/basicDashboard"
+            app:popUpTo="@id/basicDashboard"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/basicWithdrawMoney"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.BasicWithdraw.BasicWithdrawMoney"
+        android:label="fragment_basic_withdraw_money"
+        tools:layout="@layout/fragment_basic_withdraw_money">
+        <action
+            android:id="@+id/action_basicWithdrawMoney_to_confirmTransfer2"
+            app:destination="@id/confirmTransfer" />
+        <action
+            android:id="@+id/action_basicWithdrawMoney_to_basicDashboard"
+            app:destination="@id/basicDashboard"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/basicDashboard"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/singleTransaction"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.Transactions.SingleTransaction"
+        android:label="fragment_single_transaction"
+        tools:layout="@layout/fragment_single_transaction" >
+        <action
+            android:id="@+id/action_singleTransaction_to_basicLatestTransactions2"
+            app:destination="@id/basicLatestTransactions2"
+            app:popUpTo="@id/basicLatestTransactions2"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/singleInvestmentHistory"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.BasicInvestment.SingleInvestmentHistory"
+        android:label="SingleInvestmentHistory" >
+        <action
+            android:id="@+id/action_singleInvestmentHistory_to_basicInvestmentHistory"
+            app:destination="@id/basicInvestmentHistory"
+            app:popUpTo="@id/basicInvestmentHistory"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountSetting"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.AccountSettings.AccountSetting"
+        android:label="fragment_account_setting"
+
+        tools:layout="@layout/fragment_account_setting">
+        <action
+            android:id="@+id/action_accountSetting_to_passwordChange"
+            app:destination="@id/passwordChange"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_accountSetting_to_basicDashboard"
+            app:destination="@id/basicDashboard"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popUpToInclusive="true"
+            app:popUpTo="@+id/basicDashboard" />
+        <action
+            android:id="@+id/action_accountSetting_to_pinLoginAccountSetting"
+            app:destination="@id/pinLoginAccountSetting"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left" />
+        <action
+            android:id="@+id/action_accountSetting_to_basicSettings"
+            app:destination="@id/basicSettings"
+            app:popUpTo="@id/basicDashboard"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/passwordChange"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.AccountSettings.PasswordChange"
+        android:label="fragment_password_change"
+        tools:layout="@layout/fragment_password_change">
+        <action
+            android:id="@+id/action_passwordChange_to_updateSecurityCode"
+            app:destination="@id/updateSecurityCode"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left" />
+        <action
+            android:id="@+id/action_passwordChange_to_accountSetting"
+            app:destination="@id/accountSetting"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/accountSetting"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateSecurityCode"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.AccountSettings.UpdateSecurityCode"
+        android:label="fragment_update_security_code"
+        tools:layout="@layout/fragment_update_security_code" >
+        <action
+            android:id="@+id/action_updateSecurityCode_to_passwordChange"
+            app:destination="@id/passwordChange"
+            app:popUpTo="@id/passwordChange"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/creditDebitPayment"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.BasicDeposit.Credit.CreditDebitPayment"
+        android:label="fragment_credit_debit_payment"
+        tools:layout="@layout/fragment_credit_debit_payment">
+        <action
+            android:id="@+id/action_creditDebitPayment_to_creditDebitPaymentSubmit"
+            app:destination="@id/creditDebitPaymentSubmit"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/basicLatestTransactions2"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.Transactions.BasicLatestTransactions"
+        android:label="fragment_basic_latest_transactions"
+        tools:layout="@layout/fragment_basic_latest_transactions">
+        <action
+            android:id="@+id/action_basicLatestTransactions2_to_singleTransaction"
+            app:destination="@id/singleTransaction"
+            app:popUpTo="@id/basicLatestTransactions2"
+            app:enterAnim="@anim/bottom_up" />
+        <action
+            android:id="@+id/action_basicLatestTransactions2_to_basicDashboard"
+            app:destination="@id/basicDashboard"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/basicDashboard"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/requestLoan"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.BasicLoans.RequestLoan"
+        android:label="fragment_request_loan"
+        tools:layout="@layout/fragment_request_loan" >
+        <action
+            android:id="@+id/action_requestLoan_to_basicLoanHistory"
+            app:destination="@id/basicLoanHistory"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left" />
+        <action
+            android:id="@+id/action_requestLoan_to_basicLoanPackages"
+            app:destination="@id/basicLoanPackages"
+            app:popUpTo="@id/basicLoanPackages"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/basicAccount"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.profile.BasicAccount"
+        android:label="BasicAccount">
+        <action
+            android:id="@+id/action_basicAccount_to_statementBankTransfer"
+            app:destination="@id/statementBankTransfer" />
+        <action
+            android:id="@+id/action_basicAccount_to_statementBills"
+            app:destination="@id/statementBills" />
+        <action
+            android:id="@+id/action_basicAccount_to_statementEdeposit"
+            app:destination="@id/statementEdeposit" />
+        <action
+            android:id="@+id/action_basicAccount_to_statementGroupTransfer"
+            app:destination="@id/statementGroupTransfer" />
+        <action
+            android:id="@+id/action_basicAccount_to_basicDashboard"
+            app:destination="@id/basicDashboard"
+            app:popUpTo="@id/basicDashboard"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/statementBankTransfer"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.BasicTransfer.ExternalBankTransfer.StatementBankTransfer"
+        android:label="fragment_statement_bank_transfer"
+        tools:layout="@layout/fragment_statement_bank_transfer" >
+        <action
+            android:id="@+id/action_statementBankTransfer_to_basicAccount"
+            app:destination="@id/basicAccount"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/basicAccount"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_statementBankTransfer_to_singleOtherBankTransaction"
+            app:destination="@id/singleOtherBankTransaction"
+
+            app:popUpTo="@id/statementBankTransfer"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/statementBills"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.Bills.StatementBills"
+        android:label="fragment_statement_bills"
+        tools:layout="@layout/fragment_statement_bills">
+        <action
+            android:id="@+id/action_statementBills_to_singleStatementBills"
+            app:destination="@id/singleStatementBills" />
+        <action
+            android:id="@+id/action_statementBills_to_basicAccount"
+            app:destination="@id/basicAccount"
+            app:popUpTo="@id/basicAccount"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/statementEdeposit"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.BasicDeposit.StatementEdeposit"
+        android:label="fragment_statement_edeposit"
+        tools:layout="@layout/fragment_statement_edeposit" >
+        <action
+            android:id="@+id/action_statementEdeposit_to_basicAccount"
+            app:destination="@id/basicAccount"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/basicAccount"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/statementGroupTransfer"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.BasicTransfer.InternalBankTransfer.StatementGroupTransfer"
+        android:label="fragment_statement_group_transfer"
+        tools:layout="@layout/fragment_statement_group_transfer" >
+        <action
+            android:id="@+id/action_statementGroupTransfer_to_basicAccount"
+            app:destination="@id/basicAccount"
+            app:popUpTo="@id/basicAccount"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/loanHistorySingleItem"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.BasicLoans.LoanHistorySingleItem"
+        android:label="fragment_loan_history_single_item"
+        tools:layout="@layout/fragment_loan_history_single_item" >
+        <action
+            android:id="@+id/action_loanHistorySingleItem_to_basicLoanHistory"
+            app:popUpTo="@id/basicLoanHistory"
+            app:popUpToInclusive="true"
+            app:destination="@id/basicLoanHistory"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/depositHistorySingleItem"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.BasicDeposit.DepositHistorySingleItem"
+        android:label="fragment_deposit_history_single_item"
+        tools:layout="@layout/fragment_deposit_history_single_item" >
+        <action
+            android:id="@+id/action_depositHistorySingleItem_to_basicDepositHistory"
+            app:destination="@id/basicDepositHistory"
+            app:popUpTo="@id/basicDepositHistory"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewSupportItem"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.Support.ViewSupportItem"
+        android:label="fragment_view_support_item"
+        tools:layout="@layout/fragment_view_support_item" />
+    <fragment
+        android:id="@+id/addSupportFragment"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.Support.AddSupportFragment"
+        android:label="fragment_add_support"
+        tools:layout="@layout/fragment_add_support" >
+        <action
+            android:id="@+id/action_addSupportFragment_to_basicSupport"
+            app:destination="@id/basicSupport" />
+    </fragment>
+    <fragment
+        android:id="@+id/mobileMoneyPayment"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.BasicDeposit.Mpesa.MobileMoneyPayment"
+        android:label="fragment_mobile_money_payment"
+        tools:layout="@layout/fragment_mobile_money_payment" >
+        <action
+            android:id="@+id/action_mobileMoneyPayment_to_basicDashboard"
+            app:destination="@id/basicDashboard"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_mobileMoneyPayment_to_basicEDeposit"
+            app:destination="@id/basicEDeposit"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/basicEDeposit"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/billsTabs"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.Bills.BillsTabs"
+        android:label="BillsTabs" />
+    <fragment
+        android:id="@+id/investmentPlansDeposit"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.BasicInvestment.InvestmentPlansDeposit"
+        android:label="InvestmentPlansDeposit" >
+        <action
+            android:id="@+id/action_investmentPlansDeposit_to_basicInvestmentHistory"
+            app:destination="@id/basicInvestmentHistory" />
+        <action
+            android:id="@+id/action_investmentPlansDeposit_to_basicInvestmentPackages"
+            app:destination="@id/basicInvestmentPackages"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/basicInvestmentPackages"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/singleStatementBills"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.Bills.SingleStatementBills"
+        android:label="fragment_single_statement_bills"
+        tools:layout="@layout/fragment_single_statement_bills" />
+    <fragment
+        android:id="@+id/myLoans"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.BasicLoans.MyLoans"
+        android:label="fragment_my_loans"
+        tools:layout="@layout/fragment_my_loans">
+        <action
+            android:id="@+id/action_myLoans_to_basicPayLoans"
+            app:destination="@id/basicPayLoans"
+            app:popUpTo="@id/basicPayLoans"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left" />
+        <action
+            android:id="@+id/action_myLoans_to_basicDashboard"
+            app:destination="@id/basicDashboard"
+            app:popUpTo="@id/basicDashboard"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/contacts"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.BasicPayForFriends.Contacts"
+        android:label="fragment_contacts"
+        tools:layout="@layout/fragment_contacts">
+        <action
+            android:id="@+id/action_contacts_to_basicPayfriends"
+            app:destination="@id/basicPayfriends" />
+        <action
+            android:id="@+id/action_contacts_to_payFriendsViaMpesa"
+            app:destination="@id/payFriendsViaMpesa" />
+        <action
+            android:id="@+id/action_contacts_to_transferFundsFragment"
+            app:destination="@id/transferFundsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/transferFundsFragment"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.BasicTransfer.TransferFundsFragment"
+        android:label="fragment_transfer_funds"
+        tools:layout="@layout/fragment_transfer_funds">
+        <action
+            android:id="@+id/action_transferFundsFragment_to_internalTransferOtpFragment"
+            app:destination="@id/internalTransferOtpFragment" />
+        <action
+            android:id="@+id/action_transferFundsFragment_to_otherBankTransferOtpFragment"
+            app:destination="@id/otherBankTransferOtpFragment" />
+        <action
+            android:id="@+id/action_transferFundsFragment_to_basicDashboard"
+            app:destination="@id/basicDashboard"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/basicDashboard"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_transferFundsFragment_to_contacts"
+            app:destination="@id/contacts" />
+    </fragment>
+    <fragment
+        android:id="@+id/internalTransferOtpFragment"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.BasicTransfer.InternalBankTransfer.InternalTransferOtpFragment"
+        android:label="fragment_internal_transfer_otp"
+        tools:layout="@layout/fragment_internal_transfer_otp">
+        <action
+            android:id="@+id/action_internalTransferOtpFragment_to_statementGroupTransfer"
+            app:destination="@id/statementGroupTransfer" />
+        <action
+            android:id="@+id/action_internalTransferOtpFragment_to_basicDashboard"
+            app:popUpTo="@id/basicDashboard"
+            app:popUpToInclusive="true"
+            app:destination="@id/basicDashboard" />
+    </fragment>
+    <fragment
+
+        android:id="@+id/otherBankTransferOtpFragment"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.BasicTransfer.ExternalBankTransfer.OtherBankTransferOtpFragment"
+        android:label="fragment_other_bank_transfer_otp"
+        tools:layout="@layout/fragment_other_bank_transfer_otp">
+        <action
+            android:id="@+id/action_otherBankTransferOtpFragment_to_statementBankTransfer"
+            app:destination="@id/statementBankTransfer" />
+    </fragment>
+
+    <activity
+        android:id="@+id/mapsActivity"
+        android:name="com.microfinance.hsmicrofinance.UI.MapsActivity"
+        android:label="activity_maps"
+        tools:layout="@layout/activity_maps" />
+    <fragment
+        android:id="@+id/creditDebitPaymentSubmit"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.BasicDeposit.Credit.CreditDebitPaymentSubmit"
+        android:label="fragment_credit_debit_payment_submit"
+        tools:layout="@layout/fragment_credit_debit_payment_submit" >
+        <action
+            android:id="@+id/action_creditDebitPaymentSubmit_to_basicDashboard"
+            app:destination="@id/basicDashboard"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/tranferOTPconfirm"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.BasicWithdraw.TranferOTPconfirm"
+        android:label="fragment_tranfer_o_t_pconfirm"
+        tools:layout="@layout/fragment_tranfer_o_t_pconfirm" >
+        <action
+            android:id="@+id/action_tranferOTPconfirm_to_confirmTransfer"
+            app:destination="@id/confirmTransfer"
+            app:popUpTo="@id/confirmTransfer"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/back_to_initiate_withdraw"
+            app:destination="@id/basicWithdrawMoney"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_tranferOTPconfirm_to_basicLatestTransactions2"
+            app:destination="@id/basicLatestTransactions2" />
+    </fragment>
+    <fragment
+        android:id="@+id/payForFriendsOTPFragment"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.BasicPayForFriends.PayForFriendsOTPFragment"
+        android:label="fragment_pay_for_friends_o_t_p"
+        tools:layout="@layout/fragment_pay_for_friends_o_t_p">
+        <action
+            android:id="@+id/action_payForFriendsOTPFragment_to_statementGroupTransfer"
+            app:destination="@id/statementGroupTransfer" />
+    </fragment>
+    <fragment
+        android:id="@+id/pinLoginAccountSetting"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.Pins.PinLoginAccountSetting"
+        android:label="fragment_pin_login_account_setting"
+        tools:layout="@layout/fragment_pin_login_account_setting">
+        <action
+            android:id="@+id/action_pinLoginAccountSetting_to_pinSetterAccountSetting"
+            app:destination="@id/pinSetterAccountSetting" />
+    </fragment>
+    <fragment
+        android:id="@+id/pinSetterAccountSetting"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.Pins.PinSetterAccountSetting"
+        android:label="PinSetterAccountSetting" />
+    <fragment
+        android:id="@+id/HSPaymentsSubmit"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.BasicDeposit.HSPayments.HSPaymentsSubmit"
+        android:label="fragment_h_s_payments_submit"
+        tools:layout="@layout/fragment_h_s_payments_submit" >
+        <action
+            android:id="@+id/action_HSPaymentsSubmit_to_basicDepositHistory"
+            app:destination="@id/basicDepositHistory"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_HSPaymentsSubmit_to_HSPay"
+            app:destination="@id/HSPay"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/HSPay"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/HSPay"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.BasicDeposit.HSPayments.HSPay"
+        android:label="fragment_h_s_pay"
+        tools:layout="@layout/fragment_h_s_pay">
+        <action
+            android:id="@+id/action_HSPay_to_HSPaymentsSubmit"
+            app:destination="@id/HSPaymentsSubmit" />
+        <action
+            android:id="@+id/action_HSPay_to_basicEDeposit"
+            app:destination="@id/basicEDeposit"
+            app:popUpTo="@id/basicEDeposit"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/confirmTransfer"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.BasicWithdraw.ConfirmTransfer"
+        android:label="ConfirmTransfer" >
+        <action
+            android:id="@+id/action_confirmTransfer_to_tranferOTPconfirm"
+            app:destination="@id/tranferOTPconfirm" />
+        <action
+            android:id="@+id/action_confirmTransfer_to_basicWithdrawMoney"
+            app:destination="@id/basicWithdrawMoney"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/basicWithdrawMoney"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/payFriendsViaMpesa"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.BasicPayForFriends.PayFriendsViaMpesa"
+        android:label="PayFriendsViaMpesa">
+        <action
+            android:id="@+id/action_payFriendsViaMpesa_to_contacts"
+            app:destination="@id/contacts" />
+        <action
+            android:id="@+id/action_payFriendsViaMpesa_to_basicDashboard"
+            app:popUpTo="@id/basicDashboard"
+            app:popUpToInclusive="true"
+            app:destination="@id/basicDashboard"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_payFriendsViaMpesa_to_internalTransferOtpFragment"
+            app:destination="@id/internalTransferOtpFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/singleOtherBankTransaction"
+        android:name="com.microfinance.hsmicrofinance.UI.Fragments.BasicTransfer.ExternalBankTransfer.SingleOtherBankTransaction"
+        android:label="fragment_single_other_bank_transaction"
+        tools:layout="@layout/fragment_single_other_bank_transaction" >
+        <action
+            android:id="@+id/action_singleOtherBankTransaction_to_statementBankTransfer"
+            app:destination="@id/statementBankTransfer"
+            app:popUpTo="@id/statementBankTransfer"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right" />
+    </fragment>
+
+
+</navigation>

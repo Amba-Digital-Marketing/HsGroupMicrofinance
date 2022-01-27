@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+
+       android:layout_height="match_parent">
+       <TextView
+           android:id="@+id/pi"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="30dp"
+           android:layout_marginTop="40dp"
+           android:text="Personal Information"
+           android:textColor="@color/dark_blue"
+           android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+           android:textStyle="bold"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent" />
+
+
+
+       <ImageView
+           android:id="@+id/piimage"
+           android:layout_width="20dp"
+           android:layout_height="20dp"
+           android:layout_marginTop="20dp"
+           app:layout_constraintStart_toStartOf="@+id/pi"
+           app:layout_constraintTop_toBottomOf="@+id/pi"
+           app:srcCompat="@drawable/piname" />
+
+       <TextView
+           android:id="@+id/tvname"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="10dp"
+           android:text="Ian Murithi"
+           android:textStyle="bold"
+           app:layout_constraintBottom_toBottomOf="@+id/piimage"
+           app:layout_constraintStart_toEndOf="@+id/piimage"
+           app:layout_constraintTop_toTopOf="@+id/piimage"
+           app:layout_constraintVertical_bias="1.0" />
+
+       <ImageView
+           android:id="@+id/piemail"
+           android:layout_width="20dp"
+           android:layout_height="20dp"
+           android:layout_marginTop="20dp"
+           app:layout_constraintStart_toStartOf="@+id/piimage"
+           app:layout_constraintTop_toBottomOf="@+id/piimage"
+           app:srcCompat="@drawable/piemail" />
+
+       <TextView
+           android:id="@+id/tvemail"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="10dp"
+           android:text="test@email.com"
+           android:textStyle="bold"
+           app:layout_constraintBottom_toBottomOf="@+id/piemail"
+           app:layout_constraintStart_toEndOf="@+id/piemail"
+           app:layout_constraintTop_toTopOf="@+id/piemail" />
+
+       <ImageView
+           android:id="@+id/picard"
+           android:layout_width="20dp"
+           android:layout_height="20dp"
+           android:layout_marginTop="20dp"
+           app:layout_constraintStart_toStartOf="@+id/piemail"
+           app:layout_constraintTop_toBottomOf="@+id/piemail"
+           app:srcCompat="@drawable/piidcard" />
+
+       <TextView
+           android:id="@+id/tvKRA"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="123456"
+           android:textStyle="bold"
+           android:layout_marginStart="10dp"
+           app:layout_constraintBottom_toBottomOf="@+id/picard"
+           app:layout_constraintStart_toEndOf="@+id/picard"
+           app:layout_constraintTop_toTopOf="@+id/picard" />
+
+       <ImageView
+           android:id="@+id/pitelephone"
+           android:layout_width="20dp"
+           android:layout_height="20dp"
+           android:layout_marginTop="20dp"
+           app:layout_constraintStart_toStartOf="@+id/picard"
+           app:layout_constraintTop_toBottomOf="@+id/picard"
+           app:srcCompat="@drawable/pitelephone" />
+
+       <TextView
+           android:id="@+id/tvuserPhoneNo"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="+235 711893435"
+           android:textStyle="bold"
+           android:layout_marginStart="10dp"
+           app:layout_constraintBottom_toBottomOf="@+id/pitelephone"
+           app:layout_constraintStart_toEndOf="@+id/pitelephone"
+           app:layout_constraintTop_toTopOf="@+id/pitelephone" />
+
+       <TextView
+           android:id="@+id/tvaccout"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="30dp"
+           android:text="Account Information"
+           android:textColor="@color/dark_blue"
+           android:textStyle="bold"
+           android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+           app:layout_constraintStart_toStartOf="@+id/pitelephone"
+           app:layout_constraintTop_toBottomOf="@+id/pitelephone" />
+
+       <TextView
+           android:id="@+id/accno"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="20dp"
+           android:text="Account Number"
+
+           android:textStyle="bold"
+           app:layout_constraintStart_toStartOf="@+id/tvaccout"
+           app:layout_constraintTop_toBottomOf="@+id/tvaccout" />
+
+       <TextView
+           android:id="@+id/tvAccNo"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="40dp"
+           android:text="390393939"
+
+           android:textStyle="bold"
+           app:layout_constraintBottom_toBottomOf="@+id/accno"
+           app:layout_constraintStart_toEndOf="@+id/accno"
+           app:layout_constraintTop_toTopOf="@+id/accno" />
+
+       <TextView
+           android:id="@+id/accbalnce"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="20dp"
+           android:text="Account Balance"
+
+           android:textStyle="bold"
+           app:layout_constraintStart_toStartOf="@+id/accno"
+           app:layout_constraintTop_toBottomOf="@+id/accno" />
+
+       <TextView
+           android:id="@+id/tvBalance"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Ksh 100000"
+           android:textStyle="bold"
+           app:layout_constraintBottom_toBottomOf="@+id/accbalnce"
+           app:layout_constraintStart_toStartOf="@+id/tvAccNo"
+           app:layout_constraintTop_toTopOf="@+id/accbalnce" />
+   </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

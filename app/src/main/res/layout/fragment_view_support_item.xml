@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="55dp"
+    android:orientation="vertical"
+    app:layout_constrainedWidth="true"
+    app:layout_constraintHeight="true"
+    app:layout_collapseMode="parallax"
+    tools:context=".UI.Fragments.Support.ViewSupportItem">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:id="@+id/top"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="402dp"
+                android:layout_height="2dp"
+                android:background="@color/dark_blue" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvticketno"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/smallpadding"
+                    android:text="Ticket"
+                    android:textSize="@dimen/largeTextSize"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="5dp"
+                    tools:layout_editor_absoluteY="5dp" />
+
+                <TextView
+                    android:id="@+id/tvticketnoview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/smallpadding"
+                    android:text="Ticket"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/largeTextSize"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="206dp"
+                    tools:layout_editor_absoluteY="5dp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvStatus"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/smallpadding"
+                    android:text="Status"
+                    android:textSize="@dimen/largeTextSize"
+                    tools:layout_editor_absoluteX="5dp"
+                    tools:layout_editor_absoluteY="44dp" />
+
+                <TextView
+                    android:id="@+id/tvStatusview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/smallpadding"
+                    android:text="Status"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/largeTextSize"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="211dp"
+                    tools:layout_editor_absoluteY="49dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvtitle"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/smallpadding"
+                    android:text="Title"
+                    android:textSize="@dimen/largeTextSize"
+                    tools:layout_editor_absoluteX="10dp"
+                    tools:layout_editor_absoluteY="83dp" />
+
+                <TextView
+                    android:id="@+id/tvtitleview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/smallpadding"
+                    android:text="Title"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/largeTextSize"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/svchats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/chatplatform"
+        android:layout_below="@+id/top"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvsupportmessages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:layout_editor_absoluteX="5dp"
+                tools:layout_editor_absoluteY="415dp" />
+        </LinearLayout>
+    </ScrollView>
+
+   <ScrollView
+       android:id="@+id/chatplatform"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_alignParentBottom="true">
+       <LinearLayout
+
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_gravity="bottom"
+           android:orientation="horizontal">
+
+           <com.google.android.material.textfield.TextInputLayout
+               android:id="@+id/tilcomment"
+               style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_weight="2"
+               android:layout_margin="@dimen/smallmargin"
+               android:hint="Enter your message here"
+               app:boxCornerRadiusBottomEnd="@dimen/smallmargin"
+               app:boxCornerRadiusBottomStart="@dimen/smallmargin"
+               app:boxCornerRadiusTopEnd="@dimen/smallmargin"
+               app:boxCornerRadiusTopStart="@dimen/smallmargin"
+               app:boxStrokeColor="@color/dark_blue"
+               app:endIconMode="clear_text"
+               app:hintTextColor="@color/dark_green"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintEnd_toStartOf="@+id/btnsubmitSupport"
+               app:layout_constraintStart_toStartOf="parent">
+
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/etsupportcomment"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:gravity="top" />
+           </com.google.android.material.textfield.TextInputLayout>
+
+           <com.google.android.material.button.MaterialButton
+               android:id="@+id/btnsubmitSupport"
+               android:layout_width="0dp"
+               android:layout_height="40dp"
+               android:layout_weight="0.3"
+               android:layout_margin="@dimen/smallmargin"
+               android:background="@drawable/send_icon"
+               android:padding="@dimen/mediumpadding"
+               android:textSize="@dimen/largeTextSize"
+               android:textStyle="bold"
+               android:layout_gravity="center"
+               app:cornerRadius="@dimen/largepadding"
+               android:layout_marginLeft="0dp"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toTopOf="@+id/tilcomment" />
+       </LinearLayout>
+   </ScrollView>
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UI.Fragments.BasicTransfer.ExternalBankTransfer.OtherBankTransferFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvbankTransfer"
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="@dimen/mediummargin"
+        android:layout_marginRight="20dp"
+        app:cardBackgroundColor="#f9f9f9"
+        app:cardCornerRadius="15dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:paddingTop="@dimen/smallpadding"
+                android:paddingBottom="30dp">
+
+                <TextView
+                    android:id="@+id/tvCountryAlert"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/pink"
+                    android:textSize="@dimen/mediumTextSize" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilCountry"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvCountryAlert"
+                    android:layout_marginLeft="@dimen/smallmargin"
+                    android:layout_marginRight="@dimen/smallmargin"
+                    app:boxStrokeColor="@color/dark_blue">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/etCountry"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="none"
+                        android:padding="@dimen/mediumpadding"
+                        android:text="Country" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <TextView
+                    android:id="@+id/tvBankAlert"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tilCountry"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/pink"
+                    android:textSize="@dimen/mediumTextSize" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilBank"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvBankAlert"
+                    android:layout_marginStart="@dimen/smallmargin"
+                    android:layout_marginEnd="@dimen/smallmargin"
+                    android:layout_marginBottom="@dimen/smallmargin"
+                    app:boxStrokeColor="@color/dark_blue">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/etBank"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="none"
+                        android:padding="@dimen/mediumpadding"
+                        android:text="Bank Name" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/tvCurrencyAlert"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tilBank"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/pink"
+                    android:textSize="@dimen/mediumTextSize" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilCurrency"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvCurrencyAlert"
+                    android:layout_marginLeft="@dimen/smallmargin"
+                    android:layout_marginRight="@dimen/smallmargin"
+                    app:boxStrokeColor="@color/dark_blue">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/etCurrency"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:inputType="none"
+                        android:paddingLeft="@dimen/smallpadding"
+                        android:paddingTop="@dimen/mediumpadding"
+                        android:paddingBottom="@dimen/mediumpadding"
+                        android:text="Select Currency" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/tvBranchAlert"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tilCurrency"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/pink"
+                    android:textSize="@dimen/mediumTextSize" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilBranch"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvBranchAlert"
+                    android:layout_marginStart="@dimen/smallmargin"
+                    android:layout_marginEnd="@dimen/smallmargin"
+                    android:layout_marginBottom="@dimen/smallmargin"
+                    android:hint="Branch"
+                    app:boxStrokeColor="@color/dark_blue"
+                    app:endIconMode="clear_text"
+                    app:hintTextColor="@color/dark_green">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etBranch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/tvAccountHolderAlert"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tilBranch"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/pink"
+                    android:textSize="@dimen/mediumTextSize" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/account_holder_layout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvAccountHolderAlert"
+                    android:layout_marginStart="@dimen/smallmargin"
+                    android:layout_marginEnd="@dimen/smallmargin"
+                    android:layout_marginBottom="@dimen/smallmargin"
+                    android:hint="Name of Account Holder "
+                    app:boxStrokeColor="@color/dark_blue"
+                    app:endIconMode="clear_text"
+                    app:hintTextColor="@color/dark_green">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etaccount_holder"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/tvaccountAlert"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/account_holder_layout"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/pink"
+                    android:textSize="@dimen/mediumTextSize" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/account_layout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvaccountAlert"
+                    android:layout_marginStart="@dimen/smallmargin"
+                    android:layout_marginEnd="@dimen/smallmargin"
+                    android:layout_marginBottom="@dimen/smallmargin"
+                    android:hint="Account Number"
+                    app:boxStrokeColor="@color/dark_blue"
+                    app:endIconMode="clear_text"
+                    app:hintTextColor="@color/dark_green">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etAccount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="phone" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <TextView
+                    android:id="@+id/tvamountAlert"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/account_layout"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/pink"
+                    android:textSize="@dimen/mediumTextSize" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/amount_layout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvamountAlert"
+                    android:layout_marginStart="@dimen/smallmargin"
+                    android:layout_marginEnd="@dimen/smallmargin"
+                    android:layout_marginBottom="@dimen/smallmargin"
+                    android:hint="Amount (Ksh)"
+                    app:boxStrokeColor="@color/dark_blue"
+                    app:endIconMode="clear_text"
+                    app:hintTextColor="@color/dark_green">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="phone" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnOtherBankTransfer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/amount_layout"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="@color/dark_green"
+                    android:padding="10dp"
+                    android:text="Transfer"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    app:cornerRadius="@dimen/smallpadding" />
+
+                <ProgressBar
+                    android:id="@+id/progrebar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="16dp"
+                    android:indeterminateTint="@color/dark_green"
+                    android:outlineSpotShadowColor="@color/dark_blue"
+                    app:layout_constraintHorizontal_bias="0.498" />
+
+            </RelativeLayout>
+        </ScrollView>
+    </com.google.android.material.card.MaterialCardView>
+
+
+</RelativeLayout>

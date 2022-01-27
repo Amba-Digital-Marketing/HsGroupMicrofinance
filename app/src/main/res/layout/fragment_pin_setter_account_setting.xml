@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".UI.Fragments.Pins.PinSetterFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/parentconstraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="30dp">
+
+        <ImageView
+            android:id="@+id/ivlogo"
+            android:layout_width="402dp"
+            android:layout_height="90dp"
+            android:src="@drawable/logo"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.444"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivpin_lock"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/pin_shape"
+            android:padding="@dimen/largepadding"
+            android:src="@drawable/ic_lock_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivlogo" />
+
+        <TextView
+            android:id="@+id/tvPinLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:text="Create a 4 digit pin"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/dark_green"
+            android:textSize="@dimen/largeTextSize"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/ivpin_lock"
+            app:layout_constraintStart_toStartOf="@+id/ivpin_lock"
+            app:layout_constraintTop_toBottomOf="@+id/ivpin_lock" />
+
+
+        <EditText
+            android:id="@+id/etpinShow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:inputType="numberPassword"
+            android:maxLength="4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvPinLogin" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:padding="@dimen/largemargin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etpinShow">
+
+            <TextView
+                android:id="@+id/tvno1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/smallmargin"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/pin_shape"
+                android:gravity="center"
+                android:padding="@dimen/smallpadding"
+                android:text="1"
+                android:textColor="@color/dark_blue"
+                android:textSize="@dimen/largeTextSize"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/tvno4"
+                app:layout_constraintEnd_toEndOf="@+id/tvno4"
+                app:layout_constraintStart_toStartOf="@+id/tvno4" />
+
+            <TextView
+                android:id="@+id/tvno2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/smallmargin"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/pin_shape"
+                android:gravity="center"
+                android:padding="@dimen/smallpadding"
+                android:text="2"
+                android:textColor="@color/dark_blue"
+                android:textSize="@dimen/largeTextSize"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/tvno5"
+                app:layout_constraintEnd_toEndOf="@+id/tvno5"
+                app:layout_constraintStart_toStartOf="@+id/tvno5" />
+
+            <TextView
+                android:id="@+id/tvno3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/smallmargin"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/pin_shape"
+                android:gravity="center"
+                android:padding="@dimen/smallpadding"
+                android:text="3"
+                android:textColor="@color/dark_blue"
+                android:textSize="@dimen/largeTextSize"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/tvno6"
+                app:layout_constraintEnd_toEndOf="@+id/tvno6"
+                app:layout_constraintStart_toStartOf="@+id/tvno6" />
+
+            <TextView
+                android:id="@+id/tvno4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/pin_shape"
+                android:gravity="center"
+                android:padding="@dimen/smallpadding"
+                android:text="4"
+                android:textColor="@color/dark_blue"
+                android:textSize="@dimen/largeTextSize"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/tvno7"
+                app:layout_constraintEnd_toEndOf="@+id/tvno7"
+                app:layout_constraintStart_toStartOf="@+id/tvno7" />
+
+            <TextView
+                android:id="@+id/tvno5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/smallmargin"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/pin_shape"
+                android:gravity="center"
+                android:padding="@dimen/smallpadding"
+                android:text="5"
+                android:textColor="@color/dark_blue"
+                android:textSize="@dimen/largeTextSize"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/tvno8"
+                app:layout_constraintEnd_toEndOf="@+id/tvno8"
+                app:layout_constraintStart_toStartOf="@+id/tvno8" />
+
+            <TextView
+                android:id="@+id/tvno6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/smallmargin"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/pin_shape"
+                android:gravity="center"
+                android:padding="@dimen/smallpadding"
+                android:text="6"
+                android:textColor="@color/dark_blue"
+                android:textSize="@dimen/largeTextSize"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/tvno9"
+                app:layout_constraintEnd_toEndOf="@+id/tvno9"
+                app:layout_constraintStart_toStartOf="@+id/tvno9" />
+
+            <TextView
+                android:id="@+id/tvno8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/smallmargin"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/pin_shape"
+                android:gravity="center"
+                android:padding="@dimen/smallpadding"
+                android:text="8"
+                android:textColor="@color/dark_blue"
+                android:textSize="@dimen/largeTextSize"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/tvno0"
+                app:layout_constraintEnd_toEndOf="@+id/tvno0"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/tvno0" />
+
+            <TextView
+                android:id="@+id/tvno9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/smallmargin"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/pin_shape"
+                android:gravity="center"
+                android:padding="@dimen/smallpadding"
+                android:text="9"
+                android:textColor="@color/dark_blue"
+                android:textSize="@dimen/largeTextSize"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/tvdelete"
+                app:layout_constraintEnd_toEndOf="@+id/tvdelete"
+                app:layout_constraintStart_toStartOf="@+id/tvdelete" />
+
+            <ImageView
+                android:id="@+id/tvdelete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="35dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/pin_shape"
+                android:gravity="center"
+                android:padding="@dimen/smallpadding"
+                android:src="@drawable/ic_delete"
+                android:textColor="@color/dark_blue"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <ImageView
+                android:id="@+id/tvsubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/pin_shape"
+                android:gravity="center"
+                android:padding="@dimen/smallpadding"
+                android:src="@drawable/ic_check_correct"
+                android:textColor="@color/dark_blue"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/tvno0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/smallmargin"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/pin_shape"
+                android:gravity="center"
+                android:padding="@dimen/smallpadding"
+                android:text="0"
+                android:textColor="@color/dark_blue"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tvdelete"
+                app:layout_constraintStart_toEndOf="@+id/tvsubmit"
+                app:layout_constraintTop_toBottomOf="@+id/tvno9" />
+
+            <TextView
+                android:id="@+id/tvno7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/smallmargin"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/pin_shape"
+                android:gravity="center"
+                android:padding="@dimen/smallpadding"
+                android:text="7"
+                android:textColor="@color/dark_blue"
+                android:textSize="@dimen/largeTextSize"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/tvsubmit"
+                app:layout_constraintEnd_toEndOf="@+id/tvsubmit"
+                app:layout_constraintStart_toStartOf="@+id/tvsubmit" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ProgressBar
+            android:id="@+id/progrebar"
+            android:layout_width="42dp"
+            android:layout_height="46dp"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/pink"
+            app:layout_constraintBottom_toBottomOf="@+id/ivpin_lock"
+            app:layout_constraintEnd_toEndOf="@+id/ivpin_lock"
+            app:layout_constraintStart_toStartOf="@+id/ivpin_lock"
+            app:layout_constraintTop_toTopOf="@+id/ivpin_lock"
+            app:layout_constraintVertical_bias="0.673" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+</LinearLayout>

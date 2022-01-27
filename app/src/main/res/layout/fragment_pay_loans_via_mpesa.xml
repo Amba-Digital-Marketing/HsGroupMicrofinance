@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/mediumpadding"
+
+    tools:context=".Fragments.PayLoansViaMpesa">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/dark_blue"
+
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_centerInParent="true"
+        android:layout_height="match_parent">
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            app:cardBackgroundColor="@color/fragment_background"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="20dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.473"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:padding="@dimen/mediumpadding"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp">
+
+
+                <TextView
+                    android:id="@+id/tvuserloantype"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/mediummargin"
+                    android:padding="@dimen/mediumpadding"
+                    android:text="Loan Type"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="@dimen/largeTextSize"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvuserPhoneNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/mediummargin"
+                    android:layout_marginTop="36dp"
+                    android:padding="@dimen/mediumpadding"
+                    android:text="Phone No: 0712345678"
+                    android:textColor="@color/dark_blue"
+                    android:textSize="@dimen/largeTextSize"
+
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@+id/tvuserloantype"
+                    tools:layout_editor_absoluteX="16dp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/account_amount"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/mediummargin"
+                    android:hint="Enter Amount"
+                    app:boxStrokeColor="@color/dark_blue"
+                    app:endIconMode="clear_text"
+                    app:hintTextColor="@color/dark_green"
+                    app:layout_constraintBottom_toTopOf="@+id/payfriend_submit_btn"
+                    app:layout_constraintTop_toBottomOf="@+id/tvuserPhoneNo"
+                    tools:layout_editor_absoluteX="20dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/enter_amount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/payfriend_submit_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="@dimen/mediummargin"
+                    android:backgroundTint="@color/dark_green"
+                    android:padding="10dp"
+                    android:text="Proceed to Mpesa"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</RelativeLayout>

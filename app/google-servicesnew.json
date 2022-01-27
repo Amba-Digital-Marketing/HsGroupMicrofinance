@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "880107308112",
+    "project_id": "bills-intergrations",
+    "storage_bucket": "bills-intergrations.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:880107308112:android:5fda8e6f1a1a567e813d55",
+        "android_client_info": {
+          "package_name": "com.microfinance.hsmicrofinance"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "880107308112-aojt1tnj8p4v7kukh74l49plbqpmdes1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApA5St8iH5aEazHbXXsH9OWPeGdBtbRuo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "880107308112-aojt1tnj8p4v7kukh74l49plbqpmdes1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

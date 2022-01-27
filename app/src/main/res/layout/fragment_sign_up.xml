@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.SignUpFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/logo" />
+
+        <EditText
+            android:id="@+id/signup_fullname"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/logo"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/dark_blue"
+            android:layout_marginTop="15dp"
+            android:drawableLeft="@drawable/ic_person_24"
+            android:drawableTint="@color/dark_blue"
+            android:hint="Full Names"
+            android:padding="5dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textCursorDrawable="@drawable/cursor" />
+
+        <EditText
+            android:id="@+id/signup_email"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/dark_blue"
+            android:layout_below="@+id/signup_fullname"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:drawableLeft="@drawable/ic_email_24"
+            android:drawableTint="@color/dark_blue"
+            android:hint="Email"
+            android:padding="5dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textCursorDrawable="@drawable/cursor" />
+
+        <EditText
+            android:id="@+id/signup_ID"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/signup_email"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="@color/dark_blue"
+            android:drawableLeft="@drawable/ic_id_24"
+            android:drawableTint="@color/dark_blue"
+            android:hint="ID number"
+            android:inputType="phone"
+            android:padding="5dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textCursorDrawable="@drawable/cursor" />
+
+        <LinearLayout
+            android:id="@+id/signup_linearlayout"
+            android:layout_width="331dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/signup_ID"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <EditText
+                android:id="@+id/signup_phone"
+                android:layout_width="320dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="2"
+                android:drawableLeft="@drawable/ic_phone"
+                android:drawableTint="@color/dark_blue"
+                android:textCursorDrawable="@drawable/cursor"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/signup_password"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/signup_linearlayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:drawableLeft="@drawable/ic_lock_24"
+            android:drawableTint="@color/dark_blue"
+            android:backgroundTint="@color/dark_blue"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="5dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textCursorDrawable="@drawable/cursor" />
+
+        <EditText
+            android:id="@+id/signup_renterpassword"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/signup_password"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="@color/dark_blue"
+            android:drawableLeft="@drawable/ic_lock_open_24"
+            android:drawableTint="@color/dark_blue"
+            android:hint="Confirm password"
+            android:inputType="textPassword"
+            android:padding="5dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textCursorDrawable="@drawable/cursor" />
+
+        <TextView
+            android:id="@+id/attach_text"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/signup_renterpassword"
+            android:layout_centerHorizontal="true"
+            android:padding="5dp"
+            android:text="Attach Picture of your Government issued ID"
+            android:textColor="@color/dark_blue" />
+
+        <LinearLayout
+            android:id="@+id/file_choser_layout"
+            android:layout_width="320dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/attach_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:padding="2dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/choose_file"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/smallpadding"
+                android:layout_weight="1"
+                android:text="Choose file"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:id="@+id/tv_filechoosen"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="2"
+                android:hint="No file chosen" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/agree_terms_layout"
+            android:layout_width="320dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/file_choser_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/agree_terms_checkbox"
+                android:backgroundTint="@color/dark_blue"
+                android:buttonTint="@color/dark_blue"
+                android:checked="false"
+                android:textColor="@color/dark_blue"
+                android:layout_width="30dp"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:id="@+id/tvagreeTermsConditions"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:backgroundTint="@color/dark_blue"
+                android:text="I agree To" />
+
+            <TextView
+                android:id="@+id/tvTerms_and_conditions"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginLeft="5dp"
+                android:text="Terms and Conditions"
+                android:backgroundTint="@color/pink"
+                android:textColor="@color/dark_blue" />
+
+
+        </LinearLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/Register_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/agree_terms_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:width="300dp"
+            android:backgroundTint="@color/pink"
+            android:text="Register"
+            android:textAllCaps="false"
+            android:textColor="#fff" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Register_btn"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Already have an account? " />
+
+            <TextView
+                android:id="@+id/login_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:text="Login"
+                android:textColor="@color/dark_blue" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <!-- TODO: Update blank fragment layout -->
+
+    </ScrollView>
+
+</FrameLayout>
