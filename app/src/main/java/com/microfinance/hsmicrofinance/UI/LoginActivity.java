@@ -114,7 +114,7 @@ ActivityLoginBinding mActivityLoginBinding;
                }
                }
            }
-                   );
+           );
 
         };
 

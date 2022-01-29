@@ -1,6 +1,8 @@
 package com.microfinance.hsmicrofinance.Network;
 
 import android.content.Context;
+import android.util.Log;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -20,7 +22,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitInstance {
-  //  public static String BASE_URL = "https://whispering-inlet-50206.herokuapp.com/";
+    public static String BASE_URL = "https://whispering-inlet-50206.herokuapp.com/";
     public static String HS_BASE_URL = "https://www.member.hsgroup.tech/api/";
 
     private static Retrofit sRetrofit;
@@ -49,8 +51,8 @@ public class RetrofitInstance {
                     .baseUrl(HS_BASE_URL)
                     //.addConverterFactory(GsonConverterFactory.create())
                     .addConverterFactory(GsonConverterFactory.create(gson))
-//                   .client(getUnsafeOkHttpClient().build())
-                    .client(sOkHttpClient)
+                   .client(getUnsafeOkHttpClient().build())
+                    //.client(sOkHttpClient)
 
                     .build();
         }
@@ -65,7 +67,9 @@ public class RetrofitInstance {
 
 }
 
- /*   private static OkHttpClient.Builder getUnsafeOkHttpClient() {
+
+//here
+   private static OkHttpClient.Builder getUnsafeOkHttpClient() {
         try {
             // Create a trust manager that does not validate certificate chains
             final TrustManager[] trustAllCerts = new TrustManager[]{
@@ -104,34 +108,45 @@ public class RetrofitInstance {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-    }*/
+    }
 
-    public static Retrofit getRetroClientWithToken(String  token){
+    //here
+
+    public static Retrofit getRetroClientWithToken(String token){
         Gson gson = new GsonBuilder()
                 .setLenient()
                 .create();
 
-        sHttpLoggingInterceptor = new HttpLoggingInterceptor();
-        sHttpLoggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
-        sInteceptor = new TokenInteceptor(token);
-        sOkHttpClient = new OkHttpClient.Builder()
-                .addInterceptor(sHttpLoggingInterceptor)
-                .addInterceptor(sInteceptor)
-                .build();
-
-        if(sRetrofit == null){
-            sRetrofit = new Retrofit.Builder()
-                    .baseUrl(HS_BASE_URL)
-                    .addConverterFactory(GsonConverterFactory.create(gson))
-                    .client(sOkHttpClient)
+            sHttpLoggingInterceptor = new HttpLoggingInterceptor();
+            sHttpLoggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+            sInteceptor = new TokenInteceptor(token);
+            sOkHttpClient = new OkHttpClient.Builder()
+                    .addInterceptor(sHttpLoggingInterceptor)
+                    .addInterceptor(sInteceptor)
                     .build();
-        }
-        else {
-            //Toast.makeText(, "", Toast.LENGTH_SHORT).show();
-            System.out.println("Empty Retrofit with token");
-        }
+
+            if(sRetrofit == null){
+                sRetrofit = new Retrofit.Builder()
+                        .baseUrl(HS_BASE_URL)
+                        .addConverterFactory(GsonConverterFactory.create(gson))
+                        .client(sOkHttpClient)
+                        .build();
+            }
+            else {
+                //Toast.makeText(sInteceptor.context, "empty token", Toast.LENGTH_SHORT).show();
+                //System.out.println("Empty Retrofit with token");
+                sRetrofit = new Retrofit.Builder()
+                        .baseUrl(HS_BASE_URL)
+                        .addConverterFactory(GsonConverterFactory.create(gson))
+                        .client(getUnsafeOkHttpClient().build())
+                        .build();
+
+            }
 
 
+
+
+   System.out.println(sRetrofit);
         return sRetrofit;
 
 

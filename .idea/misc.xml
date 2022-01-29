@@ -3,6 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/HApp/app/src/main/res/layout/activity_base_login.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/HApp/app/src/main/res/layout/activity_home.xml" value="0.1490036231884058" />
+        <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/HApp/app/src/main/res/layout/activity_login.xml" value="0.17916666666666667" />
+        <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/HApp/app/src/main/res/layout/activity_sign_up.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/HApp/app/src/main/res/layout/activity_stripe.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/HApp/app/src/main/res/layout/activity_verification.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/HApp/app/src/main/res/layout/fragment_login.xml" value="0.17916666666666667" />
+        <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/HApp/app/src/main/res/layout/fragment_payfriends_via_bank.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/HApp/app/src/main/res/layout/fragment_pin_login.xml" value="0.17916666666666667" />
+        <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/HApp/app/src/main/res/layout/fragment_pin_login_account_setting.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/HApp/app/src/main/res/layout/fragment_pin_setter.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/HApp/app/src/main/res/layout/fragment_pin_setter_account_setting.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/HApp/app/src/main/res/layout/fragment_pin_settter_login.xml" value="0.13020833333333334" />
+        <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/HApp/app/src/main/res/layout/fragment_user_verification.xml" value="0.17916666666666667" />
         <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/HSApplication/app/src/main/res/drawable/bt_uisquare.xml" value="0.2203125" />
         <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/HSApplication/app/src/main/res/layout/activity_airtime.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/Lovestrant/AndroidStudioProjects/HSApplication/app/src/main/res/layout/activity_base_login.xml" value="0.20416666666666666" />

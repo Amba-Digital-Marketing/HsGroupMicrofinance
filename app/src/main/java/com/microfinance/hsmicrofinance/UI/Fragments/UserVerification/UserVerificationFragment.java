@@ -198,7 +198,7 @@ public class UserVerificationFragment extends Fragment {
                     Handler handler = new Handler();
                     handler.postDelayed(() -> {
                         fragmentUserVerificationBinding.llresendCode.setVisibility(View.VISIBLE);
-                        fragmentUserVerificationBinding.tvalert.setText("Wrong or Expired OTP");
+                        fragmentUserVerificationBinding.tvalert.setText("Wrong  OTP");
                         fragmentUserVerificationBinding.progrebar.setVisibility(View.INVISIBLE);
                     }, 1000);
 
@@ -225,8 +225,8 @@ public class UserVerificationFragment extends Fragment {
                 }, 1000);
 
                 /*Manual Verification*/
-             /*   userVerificationViewModel.updateVerificationStatus(getContext(), Integer.parseInt(otp), 1);
-                proceedToLogin();*/
+//               userVerificationViewModel.updateVerificationStatus(getContext(), Integer.parseInt(otp), 1);
+//                proceedToLogin();
             }
         }
     }

@@ -65,7 +65,7 @@ public class LoginViewModel extends ViewModel {
                     if (response.body() != null && response.isSuccessful()) {
                         if (message.equals("Pinsetter")){
                             replaceFragment(host,new PinSetterAccountSetting("FORGOTPIN"));
-                        }else if( response.isSuccessful()){
+                        }else if(response.isSuccessful()){
                             //mLiveData.postValue(response.body());
                             //Save user to local storage
                             saveUsertoLocalDB(response.body(), host);
@@ -80,7 +80,7 @@ public class LoginViewModel extends ViewModel {
 
                     }
                 }else{
-                    binding.tvloginalert.setText("Invalid Credentials");
+                    binding.tvloginalert.setText("Invalid USER");
 
                 }
 
@@ -88,8 +88,9 @@ public class LoginViewModel extends ViewModel {
 
             @Override
             public void onFailure(Call<LoginResponse> call, Throwable t) {
-                Log.w(TAG, "onFailure: " + t.getMessage());
+                Log.d(TAG, "onFailure: " + t.getMessage());
                 System.out.println(call);
+                System.out.println(t.getMessage());
                 LiveDatacode.postValue(null);
                 mUserMutableLiveData = null;
 
@@ -200,7 +201,7 @@ public class LoginViewModel extends ViewModel {
                 .commit();
 
     }
-/*
+
     public void setFragment(Fragment host, Fragment fragment) {
 
         host.getActivity().getSupportFragmentManager()
@@ -208,7 +209,7 @@ public class LoginViewModel extends ViewModel {
                 .add(R.id.fragmentContainerView, fragment)
                 .commit();
 
-    }*/
+    }
 
     private void setVerificationActivity(Fragment host, String email, int verificationStatus, String token) {
        UserVerificationFragment fragment = new UserVerificationFragment(email,verificationStatus,token);
@@ -218,33 +219,33 @@ public class LoginViewModel extends ViewModel {
 
 
     //select user from db used by login fragment
-/*
-    public void getUserFromDb(Fragment host) {
 
-        loginRunnable = () -> {
-            try {
-                UserDao db = UserDB.getDbInstance(host.getContext()).userDao();
-                if (db.getToken(1) != null) {
-                        try {
-                            String pin = db.getAll().get(0).pin;
-                            if (pin != null && !pin.equals("null")) {
-                                PinLoginFragment pinLoginFragment = new PinLoginFragment(pin);
+//    public void getUserFromDb(Fragment host) {
+//
+//        loginRunnable = () -> {
+//            try {
+//                UserDao db = UserDB.getDbInstance(host.getContext()).userDao();
+//                if (db.getToken(1) != null) {
+//                        try {
+//                            String pin = db.getAll().get(0).pin;
+//                            if (pin != null && !pin.equals("null")) {
+//                                PinLoginFragment pinLoginFragment = new PinLoginFragment(pin);
+//
+//                                Handler handler = new Handler(Looper.getMainLooper());
+//
+//                                handler.post(() -> setFragment(host, pinLoginFragment));
+//                            }
+//                        } catch (Exception e) {
+//                            e.printStackTrace();
+//                        }
+//                }
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+//
+//        };
+//        new Thread(loginRunnable).start();
+//    }
 
-                                Handler handler = new Handler(Looper.getMainLooper());
-
-                                handler.post(() -> setFragment(host, pinLoginFragment));
-                            }
-                        } catch (Exception e) {
-                            e.printStackTrace();
-                        }
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-
-        };
-        new Thread(loginRunnable).start();
-    }
-*/
 
 }

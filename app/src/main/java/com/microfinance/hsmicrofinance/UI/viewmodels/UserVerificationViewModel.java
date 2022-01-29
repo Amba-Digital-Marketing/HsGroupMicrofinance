@@ -36,14 +36,16 @@ public class UserVerificationViewModel extends ViewModel {
     public void makeApiCallForVerification(Context context, String email,String token){
         mApiServiceVerification = RetrofitInstance.getRetroClientWithToken(token).create(APIService.class);
 
-        mCallVerification = mApiServiceVerification.checkUserVerification();
+        mCallVerification = mApiServiceVerification.CheckUserVerification();
 
         mCallVerification.enqueue(new Callback<UserVerificationResponse>() {
             @Override
             public void onResponse(Call<UserVerificationResponse> call, Response<UserVerificationResponse> response) {
                 mLiveDataVerification.postValue(response.body());
 
-                if(response.body() != null) {
+                System.out.println("Token is: " + token);
+
+               if(response.body() != null) {
                     Log.d(TAG, "onResponse: " + response.body().toString());
 
                   SweetAlertDialog dialog=  new SweetAlertDialog(context, SweetAlertDialog.SUCCESS_TYPE);
@@ -59,15 +61,26 @@ public class UserVerificationViewModel extends ViewModel {
                         OTPCodeLiveData.postValue(String.valueOf(OTP));
                         LiveDatauserVerificationStatus.postValue(0);
                     }catch (Exception e){
+                        Log.d(TAG, "onResponse: err "+e.toString());
                         e.printStackTrace();
                     }
 
-                }
+            }
+//                else {
+//                    SweetAlertDialog dialog=  new SweetAlertDialog(context, SweetAlertDialog.ERROR_TYPE);
+//                    dialog.setTitleText("Err found while sending OTP to \n"+ email)
+//                            .setContentText("Don't your Email Inbox")
+//                            .setNeutralButtonTextColor(Color.parseColor("#297545")).setCancelable(false);
+//                    dialog.show();
+//                }
             }
 
             @Override
             public void onFailure(Call<UserVerificationResponse> call, Throwable t) {
-                Log.w(TAG, "onFailure: " + t);
+
+
+
+                Log.d(TAG, "onFailure: " + t);
                 System.out.println(call);
                 LiveDatauserVerificationStatus.postValue(-1);
                 ErrorLiveData.postValue(t.toString());
@@ -121,7 +134,7 @@ public void updateVerificationStatus(Context context,int verificationCode, int v
 }
 
 /*
-*  public void makeApiCallConfirmVerification(Context context, String otp){
+ public void makeApiCallConfirmVerification(Context context, String otp){
         mApiServicesendOTP = RetrofitInstance.getRetroClient(context).create(APIService.class);
 
         mCallsendOTP = mApiServicesendOTP.sendOTP(otp);
@@ -146,4 +159,4 @@ public void updateVerificationStatus(Context context,int verificationCode, int v
             }
         });
     }
-* */
+*/

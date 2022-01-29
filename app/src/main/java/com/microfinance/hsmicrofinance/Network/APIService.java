@@ -125,7 +125,7 @@ public interface APIService {
 
     @Headers("Accept: application/json")
     @GET("user/otp")
-    Call<UserVerificationResponse> checkUserVerification();
+    Call<UserVerificationResponse> CheckUserVerification();
 
 
     @POST("fixed-deposit-request/{id}")

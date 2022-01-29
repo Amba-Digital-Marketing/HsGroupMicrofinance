@@ -27,7 +27,7 @@ import com.microfinance.hsmicrofinance.databinding.FragmentLoginBinding;
 
 public class LoginFragment extends Fragment {
 
-    FragmentLoginBinding fragmentLoginBinding ;
+    FragmentLoginBinding fragmentLoginBinding;
     LoginViewModel loginViewModel;
     private static final String TAG = "LOGINFRAGMENT";
     String myemail;
@@ -36,6 +36,7 @@ public class LoginFragment extends Fragment {
         this.myemail = userEmail;
         // Required empty public constructor
     }
+
     public LoginFragment() {
         // Required empty public constructor
     }
