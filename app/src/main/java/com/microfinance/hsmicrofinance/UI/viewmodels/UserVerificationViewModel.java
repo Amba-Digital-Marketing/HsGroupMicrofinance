@@ -32,18 +32,22 @@ public class UserVerificationViewModel extends ViewModel {
     private int verificationStatus;
 
 
+
     // call to get OTP
     public void makeApiCallForVerification(Context context, String email,String token){
         mApiServiceVerification = RetrofitInstance.getRetroClientWithToken(token).create(APIService.class);
 
+        System.out.println("token is: " +token);
         mCallVerification = mApiServiceVerification.CheckUserVerification();
+
+
 
         mCallVerification.enqueue(new Callback<UserVerificationResponse>() {
             @Override
             public void onResponse(Call<UserVerificationResponse> call, Response<UserVerificationResponse> response) {
                 mLiveDataVerification.postValue(response.body());
+                LiveDatauserVerificationStatus.postValue(response.code());
 
-                System.out.println("Token is: " + token);
 
                if(response.body() != null) {
                     Log.d(TAG, "onResponse: " + response.body().toString());
@@ -56,23 +60,17 @@ public class UserVerificationViewModel extends ViewModel {
                     try{
 
                         int OTP = response.body().getDataSentInEmail().getOtpNumber();
-
                         updateVerificationStatus( context,OTP,0);
                         OTPCodeLiveData.postValue(String.valueOf(OTP));
                         LiveDatauserVerificationStatus.postValue(0);
+
                     }catch (Exception e){
                         Log.d(TAG, "onResponse: err "+e.toString());
                         e.printStackTrace();
                     }
 
             }
-//                else {
-//                    SweetAlertDialog dialog=  new SweetAlertDialog(context, SweetAlertDialog.ERROR_TYPE);
-//                    dialog.setTitleText("Err found while sending OTP to \n"+ email)
-//                            .setContentText("Don't your Email Inbox")
-//                            .setNeutralButtonTextColor(Color.parseColor("#297545")).setCancelable(false);
-//                    dialog.show();
-//                }
+
             }
 
             @Override
@@ -89,6 +87,8 @@ public class UserVerificationViewModel extends ViewModel {
             }
         });
     }
+
+
 //updating verification status in database
 public void updateVerificationStatus(Context context,int verificationCode, int verificationStatus){
     UserDao db = UserDB.getDbInstance(context).userDao();

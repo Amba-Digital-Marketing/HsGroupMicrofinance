@@ -117,13 +117,15 @@ public class RetrofitInstance {
                 .setLenient()
                 .create();
 
-            sHttpLoggingInterceptor = new HttpLoggingInterceptor();
-            sHttpLoggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
-            sInteceptor = new TokenInteceptor(token);
-            sOkHttpClient = new OkHttpClient.Builder()
-                    .addInterceptor(sHttpLoggingInterceptor)
-                    .addInterceptor(sInteceptor)
-                    .build();
+
+        sHttpLoggingInterceptor = new HttpLoggingInterceptor();
+        sHttpLoggingInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+        sInteceptor = new TokenInteceptor(token);
+
+        sOkHttpClient = new OkHttpClient.Builder()
+                .addInterceptor(sHttpLoggingInterceptor)
+                .addInterceptor(sInteceptor)
+                .build();
 
             if(sRetrofit == null){
                 sRetrofit = new Retrofit.Builder()
@@ -134,19 +136,12 @@ public class RetrofitInstance {
             }
             else {
                 //Toast.makeText(sInteceptor.context, "empty token", Toast.LENGTH_SHORT).show();
-                //System.out.println("Empty Retrofit with token");
-                sRetrofit = new Retrofit.Builder()
-                        .baseUrl(HS_BASE_URL)
-                        .addConverterFactory(GsonConverterFactory.create(gson))
-                        .client(getUnsafeOkHttpClient().build())
-                        .build();
+                System.out.println("Empty Retrofit with token");
 
             }
 
 
 
-
-   System.out.println(sRetrofit);
         return sRetrofit;
 
 

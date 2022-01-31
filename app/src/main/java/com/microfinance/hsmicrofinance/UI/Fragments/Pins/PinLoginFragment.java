@@ -1,7 +1,11 @@
 package com.microfinance.hsmicrofinance.UI.Fragments.Pins;
 
+import static com.microfinance.hsmicrofinance.UI.MyTimber.MyPREFERENCES;
+
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.hardware.camera2.TotalCaptureResult;
@@ -31,8 +35,9 @@ import com.microfinance.hsmicrofinance.R;
 import com.microfinance.hsmicrofinance.UI.LoginActivity;
 import com.microfinance.hsmicrofinance.UI.MyTimber;
 import com.microfinance.hsmicrofinance.UI.viewmodels.HomeActivityViewModel;
-import com.microfinance.hsmicrofinance.databinding.FragmentPinLoginBinding;
 import com.microfinance.hsmicrofinance.databinding.FragmentPinlockBinding;
+//import com.microfinance.hsmicrofinance.databinding.FragmentPinLoginBinding;
+//import com.microfinance.hsmicrofinance.databinding.FragmentPinlockBinding;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,8 +49,13 @@ public class PinLoginFragment extends Fragment {
     private FragmentPinlockBinding binding;
     int dbPin;
 
+    List inputpins = new ArrayList();
+    int inputTrials;
+    private static  final int TOTALTRIALS = 3;
+
     private PinLockView mPinLockView;
     private IndicatorDots mIndicatorDots;
+    private TextView display;
 
     public PinLoginFragment(String pin) {
         if (pin != null && !pin.equals("")) {
@@ -72,6 +82,7 @@ public class PinLoginFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         mPinLockView = binding.pinLockView;
         mIndicatorDots = binding.indicatorDots;
+
 
         mPinLockView.attachIndicatorDots(mIndicatorDots);
         mPinLockView.setPinLockListener(mPinLockListener);
@@ -104,12 +115,15 @@ public class PinLoginFragment extends Fragment {
 
     private void verifyPIN(String pin) {
         binding.progrebar.setVisibility(View.VISIBLE);
+
         if (pin.hashCode() == dbPin) {
             Handler handler = new Handler(Looper.getMainLooper());
             handler.postDelayed(() -> {
                 mPinLockView.resetPinLockView();
                 binding.progrebar.setVisibility(View.GONE);
                 try {
+
+                    setTrial(0); //Reset session trials attempts
 
                     Intent intent = new Intent(requireActivity(), HomeActivity.class);
                     getActivity().overridePendingTransition(0, 0);
@@ -121,14 +135,131 @@ public class PinLoginFragment extends Fragment {
                 }
 
             }, 1000);
-        } else {
-            binding.progrebar.setVisibility(View.GONE);
+        }else{
+            checkLoginTrials();
+        }
+
+    }
+
+
+
+    //Here  Kemboi Lovestrant
+    private void setTrial(int sessionVar) {
+       SharedPreferences pref = getContext().getSharedPreferences("SEssion", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = pref.edit();
+        editor.putInt("My_Trials", sessionVar);
+        editor.commit();
+    }
+
+    private int getTrials() {
+        SharedPreferences sp;
+
+        sp=getContext().getSharedPreferences("SEssion",getContext().MODE_PRIVATE);
+       int myTrials = sp.getInt("My_Trials", 1);
+
+       return myTrials;
+    }
+
+    //check number of trials
+    private void checkLoginTrials() {
+
+
+        if (getTrials() == 0) {
+            setTrial(1);
+            //Toast.makeText(getContext(), "Wrong attempt 2 attempts remaining", Toast.LENGTH_SHORT).show();
             mPinLockView.resetPinLockView();
-            Toast.makeText(getContext(), "Check Pin and try again", Toast.LENGTH_SHORT).show();
+            binding.profileName.setText("Wrong pin, 2 attempts remaining");
+            binding.profileName.setTextColor(Color.parseColor("#FF0000"));
+
+
+        } else if (getTrials() == 1) {
+            setTrial(2);
+           // Toast.makeText(getContext(), "Wrong pin, 1 last attempt remaining", Toast.LENGTH_SHORT).show();
+            mPinLockView.resetPinLockView();
+
+            binding.profileName.setText("Wrong pin, 1 last attempt remaining");
+            binding.profileName.setTextColor(Color.parseColor("#FF0000"));
+
+        } else if (getTrials() == 2) {
+            setTrial(0);
+
+            //Toast.makeText(getContext(), "No more attempt", Toast.LENGTH_SHORT).show();
+            mPinLockView.resetPinLockView();
+            binding.profileName.setText("No more attempt");
+            binding.profileName.setTextColor(Color.parseColor("#FF0000"));
+
+            Handler handler = new Handler(Looper.getMainLooper());
+            handler.postDelayed((() -> {
+                Intent intent = new Intent(requireActivity(), LoginActivity.class);
+                getActivity().overridePendingTransition(0, 0);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(intent);
+                getActivity().finish();
+
+            }), 1000);
 
         }
+
+
     }
 }
+
+
+
+//     private void checkLoginTrials() {
+//        if(inputTrials != 0) {
+//            inputpins.clear();
+//
+//            if(inputTrials == TOTALTRIALS){
+//                binding.progrebar.setVisibility(View.INVISIBLE);
+//
+//
+//                Handler handler = new Handler(Looper.getMainLooper());
+//                handler.postDelayed(() -> {
+//                    Intent intent = new Intent(getContext(), LoginActivity.class);
+//                    intent.putExtra("PUT_EMAIL","Pinsetter");
+//                    startActivity(intent);
+//                    getActivity().finishAffinity();
+//                }, 1000);
+//
+//
+//
+//                MyTimber.setPinTrials(inputTrials);
+//
+//            }
+//            else{
+//                binding.progrebar.setVisibility(View.INVISIBLE);
+//                binding.pinLockView.setTextColor(Color.parseColor("#E0223C"));
+////                binding.etpinShow.setTextColor(Color.parseColor("#E0223C"));
+//
+//                Handler handler = new Handler(Looper.getMainLooper());
+//                handler.postDelayed(() -> {
+//                    int attempts = TOTALTRIALS - inputTrials;
+//                    binding.profileNameData.setText(" Try Again \n You have " + attempts +" more attempts");
+//                    binding.profileNameData.setText("");
+//                    inputpins.clear();
+//                }, 1000);
+//
+//                MyTimber.setPinTrials(inputTrials);
+//            }
+//        }else{
+//            binding.progrebar.setVisibility(View.INVISIBLE);
+//            binding.profileNameData.setText("Wrong Pin");
+//            binding.profileNameData.setTextColor(Color.parseColor("#E0223C"));
+//            binding.profileNameData.setTextColor(Color.parseColor("#E0223C"));
+//            Handler handler = new Handler();
+//            handler.postDelayed(() -> {
+//                binding.profileNameData.setText(" Try Again");
+//                binding.profileNameData.setText("");
+//                inputpins.clear();
+//
+//
+//            }, 1000);
+//        }
+//    }
+//}
+
+
 //   FragmentPinLoginBinding fragmentPinLoginBinding;
 //
 //    int dbPin;

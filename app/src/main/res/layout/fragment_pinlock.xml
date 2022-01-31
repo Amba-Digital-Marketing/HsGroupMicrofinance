@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/dark_blue"
+    tools:context=".UI.Fragments.Pins.PinLoginFragment"
     android:gravity="center_vertical">
 
     <RelativeLayout
@@ -39,7 +41,7 @@
         android:fontFamily="sans-serif-thin"
         android:gravity="center"
         android:maxLines="1"
-        android:text="@string/action_enter_pin"
+        android:text="Enter pin"
         android:textColor="@color/white"
         android:textSize="20sp" />
 
@@ -78,4 +80,6 @@
         app:keypadShowDeleteButton="true"
         app:keypadTextColor="@color/white"
         app:keypadTextSize="18dp" />
+
+
 </RelativeLayout>

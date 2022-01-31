@@ -79,7 +79,7 @@ public class RegisterFragment extends Fragment {
             if (email.trim() != "" && email.trim().length() > 6) {
                 email = email.trim().toLowerCase();
                 if (password.trim() != ""){
-                    if(password.trim().length() > 6){
+                    if(password.trim().length() > 7){
                         if (password.equals(confirmPassword)) {
                             RegisterPersonalInfo fragment = new RegisterPersonalInfo(name, email, password, password);
                             setFragment(fragment);
@@ -87,7 +87,7 @@ public class RegisterFragment extends Fragment {
                             binding.tvconfirmpasswordaler.setText("Passwords do not match");
                         }
                     }else{
-                        binding.tvconfirmpasswordaler.setText("Passwords Must be more than 6 digits");
+                        binding.tvconfirmpasswordaler.setText("The password must be at least 8 characters.");
                     }
 
                 } else {

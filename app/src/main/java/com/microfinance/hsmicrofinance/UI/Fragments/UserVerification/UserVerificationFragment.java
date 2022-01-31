@@ -85,7 +85,7 @@ public class UserVerificationFragment extends Fragment {
             fragmentUserVerificationBinding.llresendCode.setVisibility(View.INVISIBLE);
         }
 
-        //observeVerificationStatus();
+        observeVerificationStatus();
 
         fragmentUserVerificationBinding.btnResendCode.setOnClickListener(v ->{
             fragmentUserVerificationBinding.progrebar.setVisibility(View.VISIBLE);
@@ -94,7 +94,7 @@ public class UserVerificationFragment extends Fragment {
             observeOTP();
         });
 
-        //observeOTP();
+        observeOTP();
 
 
         fragmentUserVerificationBinding.etOTP.setOnClickListener(v ->{
@@ -127,8 +127,15 @@ public class UserVerificationFragment extends Fragment {
                             fragmentUserVerificationBinding.llresendCode.setVisibility(View.VISIBLE);
                             validateOTP(myOtp);
                             System.out.println(otp + "otp");
+
+
                         }else{
                             fragmentUserVerificationBinding.tvalert.setText("Fill in OTP First");
+                           //here
+                            UserEntity userEntity = db.loaduserById(1);
+                            PinLoginFragment pinLoginFragment = new PinLoginFragment(userEntity.pin);
+                            setFragment(pinLoginFragment,"pinLogin");
+
                         }
 
                     }
@@ -198,7 +205,7 @@ public class UserVerificationFragment extends Fragment {
                     Handler handler = new Handler();
                     handler.postDelayed(() -> {
                         fragmentUserVerificationBinding.llresendCode.setVisibility(View.VISIBLE);
-                        fragmentUserVerificationBinding.tvalert.setText("Wrong  OTP");
+                        fragmentUserVerificationBinding.tvalert.setText("Wrong or Expired OTP");
                         fragmentUserVerificationBinding.progrebar.setVisibility(View.INVISIBLE);
                     }, 1000);
 
@@ -254,7 +261,8 @@ public class UserVerificationFragment extends Fragment {
 
                             if (userEntity.usertoken != null) {
                                 if(userEntity.verificationStatus == 0 ){
-                                }else{
+
+                          }else{
                                     if (userEntity.pin != null && !userEntity.pin.equals("null")) {
                                         PinLoginFragment pinLoginFragment = new PinLoginFragment(userEntity.pin);
                                         setFragment(pinLoginFragment,"pinLogin");

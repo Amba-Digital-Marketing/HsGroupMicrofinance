@@ -23,6 +23,8 @@ public class ForgotPasswordViewModel extends ViewModel {
 
     public MutableLiveData<ForgotPasswordResponse> mfpLiveData = new MutableLiveData<>();
     public MutableLiveData<Integer> mfpLiveDatacode = new MutableLiveData<>();
+
+
     public void createforgotPassword(Context context, String email ){
         mApiService = RetrofitInstance.getRetroClient(context).create(APIService.class);
 
@@ -31,9 +33,11 @@ public class ForgotPasswordViewModel extends ViewModel {
             @Override
             public void onResponse(Call<ForgotPasswordResponse> call, Response<ForgotPasswordResponse> response) {
                 mfpLiveDatacode.postValue(response.code());
+
                 if(response.code() == 200 && response.body() != null){
                     mfpLiveData.postValue(response.body());
                     Log.d(TAG, "onResponse: " + response.body());
+
                    SweetAlertDialog dialog= new SweetAlertDialog(context, SweetAlertDialog.SUCCESS_TYPE);
                            dialog .setTitleText("Verification Sent to \n"+ email)
                             .setContentText("Check your Email Inbox")

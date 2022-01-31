@@ -100,6 +100,7 @@ ActivityLoginBinding mActivityLoginBinding;
 
                if (userEntity.usertoken != null) {
                    if(userEntity.verificationStatus == 0 ){
+
                    }else{
                        if (userEntity.pin != null && !userEntity.pin.equals("null")) {
 
